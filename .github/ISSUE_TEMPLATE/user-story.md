@@ -1,6 +1,6 @@
 ---
-name: User Story Template
-about: Outline for a User Story
+name: User Story
+about: Describe a user story
 title: ''
 labels: ''
 assignees: ''
