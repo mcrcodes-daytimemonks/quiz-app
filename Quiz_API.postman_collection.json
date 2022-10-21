@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "db9aeadb-5616-452d-84c3-60dd372ad58d",
+		"name": "Quiz API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13647537"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://quizapi.io/api/v1/questions",
+			"type": "string"
+		},
+		{
+			"key": "API_KEY",
+			"value": "RDd7eTiAw49XmQzv5cjFrIHSCLNk0KXT2oCup1LJ",
+			"type": "string"
+		}
+	]
+}
