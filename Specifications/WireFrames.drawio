@@ -1,17 +1,17 @@
 <mxfile host="65bd71144e">
     <diagram name="Page-1" id="2cc2dc42-3aac-f2a9-1cec-7a8b7cbee084">
-        <mxGraphModel dx="1004" dy="399" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="10000" pageHeight="10000" background="none" math="0" shadow="0">
+        <mxGraphModel dx="687" dy="449" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="10000" pageHeight="10000" background="none" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="XVaBbjTai6L_YX0A8KyG-26" value="" style="group" parent="1" vertex="1" connectable="0">
-                    <mxGeometry x="1420" y="120" width="420" height="938" as="geometry"/>
+                    <mxGeometry x="1420" y="110" width="420" height="938" as="geometry"/>
                 </mxCell>
                 <mxCell id="XVaBbjTai6L_YX0A8KyG-1" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.browserWindow;rSize=0;strokeColor=#666666;mainText=,;recursiveResize=0;rounded=0;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;container=0;" parent="XVaBbjTai6L_YX0A8KyG-26" vertex="1">
                     <mxGeometry y="19" width="420" height="900" as="geometry"/>
                 </mxCell>
-                <mxCell id="XVaBbjTai6L_YX0A8KyG-2" value="&lt;font style=&quot;font-size: 24px&quot;&gt;Landing Page&lt;/font&gt;" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;" parent="XVaBbjTai6L_YX0A8KyG-26" vertex="1">
-                    <mxGeometry width="110" height="26" as="geometry"/>
+                <mxCell id="XVaBbjTai6L_YX0A8KyG-2" value="&lt;span style=&quot;font-size: 24px&quot;&gt;&lt;font color=&quot;#f7f7f7&quot;&gt;/index&lt;/font&gt;&lt;br&gt;&lt;/span&gt;" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;" parent="XVaBbjTai6L_YX0A8KyG-26" vertex="1">
+                    <mxGeometry x="140" y="80" width="110" height="26" as="geometry"/>
                 </mxCell>
                 <mxCell id="16" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" parent="XVaBbjTai6L_YX0A8KyG-26" vertex="1">
                     <mxGeometry y="139" width="420" height="50" as="geometry"/>
