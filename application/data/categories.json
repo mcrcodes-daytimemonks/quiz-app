@@ -8,7 +8,11 @@
         "name": "CSS"
     },
     {
-        "id": 0, 
+        "id": 2, 
         "name": "JavaScript"
+    },
+    {
+        "id": 3, 
+        "name": "mySQL"
     }
 ]
