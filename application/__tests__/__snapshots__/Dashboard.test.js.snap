@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <h1>
+      Dashboard
+    </h1>
+    <p>
+      Welcome, 
+      <span>
+        username
+      </span>
+    </p>
+    <p>
+      Please choose a category
+    </p>
+    <button>
+      JavaScript
+    </button>
+    <button>
+      HTML
+    </button>
+    <button>
+      mySQL
+    </button>
+    <br />
+    <button
+      type="button"
+    >
+      Logout
+    </button>
+  </div>
+</DocumentFragment>
+`;
