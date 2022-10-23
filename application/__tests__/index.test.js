@@ -3,6 +3,11 @@ import Home from '../pages/index'
 import '@testing-library/jest-dom'
 
 describe('Home', () => {
+  it("matches snapshot", () => {
+    const { asFragment} = render(<Home />);
+
+    expect(asFragment()).toMatchSnapshot();
+  });
   it('renders a heading', () => {
     render(<Home />)
 
