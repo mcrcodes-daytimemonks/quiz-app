@@ -1,0 +1,25 @@
+<mxfile host="65bd71144e">
+    <diagram id="nQseGdlVZaLG2KKIItsy" name="Page-1">
+        <mxGraphModel dx="-812" dy="1091" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="2540" y="90" width="420" height="938" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.browserWindow;rSize=0;strokeColor=#666666;mainText=,;recursiveResize=0;rounded=0;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;container=0;" vertex="1" parent="2">
+                    <mxGeometry x="30" y="50" width="420" height="900" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="GamePlayPage" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=25;fontColor=#666666;align=left;" vertex="1" parent="2">
+                    <mxGeometry width="190" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="App Name" style="rounded=0;whiteSpace=wrap;html=1;fontSize=24;" vertex="1" parent="2">
+                    <mxGeometry x="30" y="150" width="420" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;div&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 30px&quot;&gt;&lt;ul&gt;&lt;li&gt;This page will be resposible for handling the game play sequence from start to finish.&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;It will have access to the question set and handle progress through them.&amp;nbsp;&lt;/li&gt;&lt;li&gt;It will be responsible for updating the game state i.e. Which questions the user has answered and if they got the question correct, which question they are currently on.&amp;nbsp;&lt;/li&gt;&lt;li&gt;This page will need some mechanism for rendering the correct component (i.e. MultipleChoiceQuestion, TrueFalseQuestion etc) for each type of question.&lt;/li&gt;&lt;li&gt;We need to consider how these question components will interact/update the game state stored in LocalStorage.&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=default;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;gradientColor=none;horizontal=1;spacingTop=0;spacingLeft=16;spacingRight=16;" vertex="1" parent="1">
+                    <mxGeometry x="3060" y="110" width="1420" height="870" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
