@@ -1,27 +1,33 @@
 import { useState, useEffect } from "react";
-import multipleChoiceQuestions from "../../data/multipleChoiceQuestions.json";
+import questions from "../../data/questions.json";
 import LoginPopup from "../../components/LoginPopUp";
 import GamePlay from "../../components/GamePlay";
 
-export const getServerSideProps = (params) => {
-  console.log({params});
-  const category = params.query.category;
+function getQuestionByCategory(category) {
+  return JSON.stringify(
+    questions
+      .reduce((collector, currentItem) => {
+        const questionTagsHasCategory = currentItem.tags.some(
+          (tag) => tag.toLowerCase() === `${category}`.toLowerCase()
+        );
+        if (questionTagsHasCategory) {
+          collector.push(currentItem);
+        }
+        return collector;
+      }, [])
+      .slice(0, 5)
+      .map((question) => {
+        question.answers = question.answers.sort(() => Math.random() - 0.5);
+        return question;
+      })
+  );
+}
 
+export const getServerSideProps = (params) => {
+  const category = params.query.category;
   return {
     props: {
-      questions: JSON.stringify(
-        multipleChoiceQuestions
-          .reduce((collector, currentItem) => {
-            const questionTagsHasCategory = currentItem.tags.some(
-              (tag) => tag.name.toLowerCase() === `${category}`.toLowerCase()
-            );
-            if (questionTagsHasCategory) {
-              collector.push(currentItem);
-            }
-            return collector;
-          }, [])
-          .slice(0, 5)
-      ),
+      questions: getQuestionByCategory(category),
     },
   };
 };
