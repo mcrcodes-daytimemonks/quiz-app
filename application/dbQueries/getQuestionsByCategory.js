@@ -29,23 +29,3 @@ export default async function getQuestionByCategory(category) {
     process.exit(1);
   }
 }
-
-// export default function getQuestionByCategory(category) {
-//     return JSON.stringify(
-//       questions
-//         .reduce((collector, currentItem) => {
-//           const questionTagsHasCategory = currentItem.tags.some(
-//             (tag) => tag.toLowerCase() === `${category}`.toLowerCase()
-//           );
-//           if (questionTagsHasCategory) {
-//             collector.push(currentItem);
-//           }
-//           return collector;
-//         }, [])
-//         .slice(0, 5)
-//         .map((question) => {
-//           question.answers = question.answers.sort(() => Math.random() - 0.5);
-//           return question;
-//         })
-//     );
-//   }
