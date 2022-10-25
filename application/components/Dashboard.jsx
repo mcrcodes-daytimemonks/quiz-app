@@ -7,7 +7,8 @@ const Dashboard = ({ cachedUsername, handleLogout }) => {
 
   const selectCategory = (category) => {
     console.log({ category });
-    router.push(`/game/${category}`);
+    const limit = 5;
+    router.push(`/game/${category}?limit=${limit}`);
   };
 
   return (
