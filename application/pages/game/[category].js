@@ -10,4 +10,6 @@ export const getServerSideProps = async (params) => {
   };
 };
 
-export default ({ questions }) => <Game questions={questions} />;
+const Container = ({ questions }) => <Game questions={questions} />
+
+export default Container;
