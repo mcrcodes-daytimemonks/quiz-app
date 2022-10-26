@@ -1,29 +1,15 @@
-import { useState, useEffect } from "react";
-import LoginPopup from "../../components/LoginPopUp";
-import GamePlay from "../../components/GamePlay";
-import getQuestionByCategory from "../../dbQueries/getQuestionsByCategory";
+import Game from "../../components/pageContainers/Game";
+import getQuestionsByCategory from "../../database_queries/getQuestionsByCategory";
 
-export const  getServerSideProps = async (params) => {
-  const category = params.query.category;
+export const getServerSideProps = async (params) => {
+  const { category, limit } = params.query;
   return {
     props: {
-      questions: await getQuestionByCategory(category),
+      questions: await getQuestionsByCategory({ category, limit }),
     },
   };
 };
 
-const game = ({ questions }) => {
-  const [cachedUsername, setCachedUsername] = useState("");
+const Container = ({ questions }) => <Game questions={questions} />
 
-  useEffect(() => {
-    setCachedUsername(localStorage.getItem("username"));
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("questions", questions);
-  }, []);
-
-  return <div>{cachedUsername ? <GamePlay /> : <LoginPopup />}</div>;
-};
-
-export default game;
+export default Container;
