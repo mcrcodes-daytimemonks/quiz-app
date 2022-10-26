@@ -18,13 +18,12 @@ export default async function getQuestionsByCategory({ category, limit }) {
       questionsByCategory
         .sort((a, b) => Math.random() - 0.5)
         .slice(0, limit)
-        .map(({ id, question, answers }) =>
-          ({
-            id,
-            question,
-            answers: answers.sort((a, b) => Math.random() - 0.5),
-          })
-        )
+        .map(({ id, question, answers, format }) => ({
+          id,
+          question,
+          answers: answers.sort((a, b) => Math.random() - 0.5),
+          format,
+        }))
     );
   } catch (err) {
     console.error(err);
