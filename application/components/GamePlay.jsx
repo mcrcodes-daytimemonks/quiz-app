@@ -17,9 +17,9 @@ const GamePlay = () => {
     }
   };
 
-  useEffect(() => {
-    setQuestions(JSON.parse(localStorage.getItem("questions")));
-  }, []);
+  // useEffect(() => {
+  //   setQuestions(JSON.parse(localStorage.getItem("questions")));
+  // }, []);
 
   useEffect(() => {
     if (questions.length) {
