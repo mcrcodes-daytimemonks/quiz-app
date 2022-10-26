@@ -9,11 +9,7 @@ const Game = ({ questions }) => {
     setCachedUsername(localStorage.getItem("username"));
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem("questions", questions);
-  }, [questions]);
-
-  return <div>{cachedUsername ? <GamePlay /> : <LoginPopup />}</div>;
+  return <div>{cachedUsername ? <GamePlay questions={questions} /> : <LoginPopup />}</div>;
 };
 
 export default Game;

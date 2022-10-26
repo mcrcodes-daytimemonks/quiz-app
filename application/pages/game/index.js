@@ -2,19 +2,18 @@ import Game from "../../components/pageContainers/Game";
 import { useState, useEffect } from "react";
 
 const Container = () => {
-  const [questions, setQuestions] = useState([])
-  console.log({questions});
+  const [cachedQuestions, setCachedQuestions] = useState([])
+  console.log("game/index.js")
+  console.log({cachedQuestions});
 
   useEffect(() => {
-    if(!localStorage.getItem("questions")) {
-      fetch(`../api/getQuestionsByCategory${category}?limit=${limit}`)
-        .then(res => res.json())
-        .then((data) => setQuestions(data))
+    if(localStorage.getItem("questions")) {
+      setCachedQuestions(localStorage.getItem("questions"))
     }
   }, []);
 
  return(
-  <Game questions={questions} />
+  <Game questions={cachedQuestions} />
  )
 }
 

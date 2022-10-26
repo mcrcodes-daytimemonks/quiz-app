@@ -17,11 +17,27 @@ const Dashboard = ({ cachedUsername, handleLogout }) => {
     router.push("/game");
   }
 
+  const removeCachedQuestions = () => {
+    localStorage.setItem("questions", "");
+    window.dispatchEvent(new Event("questions"));
+  }
+
   // First thing we need to do is check local storage for questions *done*
   useEffect(() => {
     if(localStorage.getItem("questions")) {
       setCachedQuestions(true);
     }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("questions", () => {
+      setCachedQuestions(localStorage.getItem("questions"));
+    });
+
+    return () =>
+      window.removeEventListener("questions", () =>
+        setCachedQuestions(localStorage.getItem("questions"))
+      );
   }, []);
 
 
@@ -52,7 +68,7 @@ const Dashboard = ({ cachedUsername, handleLogout }) => {
     {cachedQuestions && <div>
       <p>You are currently half way through a previous game. What would you like to do?</p>
       <button type="button" onClick={returnToPreviousGame}>Continue</button>
-      <button type="button" onClick={null}>New Game</button> 
+      <button type="button" onClick={removeCachedQuestions}>New Game</button> 
       </div>}
     </div>
   );

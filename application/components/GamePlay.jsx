@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 
-const GamePlay = () => {
+const GamePlay = ({questions}) => {
   const [questions, setQuestions] = useState([]);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState("");
   const [currentAnswers, setCurrentAnswers] = useState([]);
 
+  console.log("GamePlay");
   const incrementQuestionIndex = () => {
     if (questions.length) {
       setQuestionIndex((prev) => {
@@ -17,18 +18,16 @@ const GamePlay = () => {
     }
   };
 
-  // useEffect(() => {
-  //   setQuestions(JSON.parse(localStorage.getItem("questions")));
-  // }, []);
+   useEffect(() => {
+    if(localStorage.getItem("questions")) {
+      setQuestions(JSON.parse(localStorage.getItem("questions")));
+    }
+   }, []);
 
   useEffect(() => {
     if (questions.length) {
       setCurrentQuestion(questions[questionIndex].question);
-      setCurrentAnswers(
-        Object.entries(questions[questionIndex].answers).filter(
-          (answer) => answer[1]
-        )
-      );
+      setCurrentAnswers(questions[questionIndex].answers);
     }
   }, [questions, questionIndex]);
 
