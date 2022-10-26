@@ -11,7 +11,7 @@ const Game = ({ questions }) => {
 
   useEffect(() => {
     localStorage.setItem("questions", questions);
-  }, []);
+  }, [questions]);
 
   return <div>{cachedUsername ? <GamePlay /> : <LoginPopup />}</div>;
 };
