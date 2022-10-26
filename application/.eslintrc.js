@@ -5,8 +5,7 @@ export default {
     babelOptions: {
       babelrc: false,
       configFile: false,
-      // your babel options
-      presets: ["@babel/preset-env"],
-    },
-  },
+      presets: ["@babel/preset-env"]
+    }
+  }
 };
