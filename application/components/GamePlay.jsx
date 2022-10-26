@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
 
-const GamePlay = ({questions}) => {
+const GamePlay = () => {
   const [questions, setQuestions] = useState([]);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState("");
   const [currentAnswers, setCurrentAnswers] = useState([]);
 
-  console.log("GamePlay");
   const incrementQuestionIndex = () => {
     if (questions.length) {
       setQuestionIndex((prev) => {

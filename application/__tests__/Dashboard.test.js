@@ -3,7 +3,7 @@ import Dashboard from "../components/Dashboard";
 import "@testing-library/jest-dom";
 
 const props = {
-  cachedUsername: "username",
+  storedUsername: "username",
   handleLogout: jest.fn(),
 };
 
@@ -19,7 +19,7 @@ describe("Dashboard", () => {
   it("Renders the user's name", () => {
     renderDashboard();
 
-    const usernameEl = screen.getByText(props.cachedUsername);
+    const usernameEl = screen.getByText(props.storedUsername);
 
     console.log({ usernameEl });
 

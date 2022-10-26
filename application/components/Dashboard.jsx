@@ -4,72 +4,76 @@ import { useRouter } from "next/router";
 const categories = ["JavaScript", "HTML", "mySQL"];
 
 const Dashboard = ({ cachedUsername, handleLogout }) => {
-  const [cachedQuestions, setCachedQuestions] = useState(false);
+  const [questions, setQuestions] = useState(null);
+  const [category, setCategory] = useState("");
   const router = useRouter();
 
-  const selectCategory = (category) => {
-    console.log({ category });
-    const limit = 5;
-    router.push(`/game/${category}?limit=${limit}`);
+  const newGame = (category) => {
+    localStorage.setItem("category", category);
+    dispatchEvent(new Event("questions"));
+    router.push(`/game`);
   };
 
-  const returnToPreviousGame = () => {
+  const resumeGame = () => {
     router.push("/game");
-  }
+  };
 
-  const removeCachedQuestions = () => {
-    localStorage.setItem("questions", "");
-    window.dispatchEvent(new Event("questions"));
-  }
+  const cacheCategory = (category) => {
+    localStorage.setItem("category", category);
+    window.dispatchEvent(new Event("category"));
+  };
 
-  // First thing we need to do is check local storage for questions *done*
   useEffect(() => {
-    if(localStorage.getItem("questions")) {
-      setCachedQuestions(true);
-    }
-  }, []);
+    window.addEventListener("category", () => {
+      setCategory(localStorage.getItem("category"));
+    })
+  }, [])
 
   useEffect(() => {
     window.addEventListener("questions", () => {
-      setCachedQuestions(localStorage.getItem("questions"));
+      setQuestions(localStorage.getItem("questions"));
     });
-
     return () =>
       window.removeEventListener("questions", () =>
-        setCachedQuestions(localStorage.getItem("questions"))
+        setQuestions(localStorage.getItem("questions"))
       );
   }, []);
 
-
-  // Show some markup that asks if the user wants to continue a previous game
-  // if there are questions in local storage
-  // Componet name could GameContinue
-
-  // Otherwise, show a component that asks the user to set up a new game
-  // Component name could be GameSetup
-
   return (
     <div>
-    {!cachedQuestions && <div>
-      <h1>Dashboard</h1>
-      <p>
-        Welcome, <span>{cachedUsername}</span>
-      </p>
-      <p>Please choose a category</p>
-      {categories.map((category, i) => (
-        <button key={category} onClick={() => selectCategory(category)}>
-          {category}
-        </button>
-      ))}
-      <br />
-      <button type="button" onClick={handleLogout}>
-        Logout
-      </button></div>}
-    {cachedQuestions && <div>
-      <p>You are currently half way through a previous game. What would you like to do?</p>
-      <button type="button" onClick={returnToPreviousGame}>Continue</button>
-      <button type="button" onClick={removeCachedQuestions}>New Game</button> 
-      </div>}
+      {questions ? (
+        <div>
+          <p>
+            You are currently half way through a previous game. What would you
+            like to do?
+          </p>
+          <button type="button" onClick={resumeGame}>
+            Continue
+          </button>
+          <button type="button" onClick={newGame}>
+            New Game
+          </button>
+        </div>
+      ) : (
+        <div>
+          <h1>Dashboard</h1>
+          <p>
+            Welcome, <span>{cachedUsername}</span>
+          </p>
+          <p>Please choose a category</p>
+          {categories.map((category, i) => (
+            <button key={category} onClick={() => cacheCategory(category)}>
+              {category}
+            </button>
+          ))}
+          <br />
+          <button type="button" onClick={() => newGame(category)}>Play</button> 
+          <br />
+          <button type="button" onClick={handleLogout}>
+            Logout
+          </button>
+        </div>
+      )}
     </div>
   );
 };
@@ -79,4 +83,4 @@ Dashboard.propTypes = {
   handleLogout: PropTypes.func.isRequired,
 };
 
-  export default Dashboard;
+export default Dashboard;
