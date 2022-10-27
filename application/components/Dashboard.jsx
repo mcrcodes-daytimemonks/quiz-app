@@ -16,6 +16,7 @@ const Dashboard = ({ handleLogout }) => {
     localStorage.setItem("questionIndex", 0)
     localStorage.setItem("category", "")
     localStorage.setItem("questionLimit", 1)
+    localStorage.setItem("selectedAnswers", "");
     router.reload();
   };
 
