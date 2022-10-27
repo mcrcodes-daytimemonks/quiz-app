@@ -3,41 +3,38 @@ import GamePlay from "../components/GamePlay";
 import { useState, useEffect } from "react";
 
 const Game = () => {
-  const [questions, setQuestions] = useState("");
-  const [username, setUsername] = useState("");
+  const [questions, setQuestions] = useState([]);
   const [category, setCategory] = useState("");
+  const [username, setUsername] = useState("");
+  const [questionLimit, setQuestionLimit] = useState(1);
+
+  console.log({ questions });
 
   useEffect(() => {
-    const cachedQuestions = localStorage.getItem("questions");
-    if (cachedQuestions) {
-      setQuestions(cachedQuestions);
-    }
-
-    const cachedUsername = localStorage.getItem("username");
-    if (cachedUsername) {
-      setUsername(cachedUsername);
-    }
-
-    const cachedCategory = localStorage.getItem("category");
-    if (cachedCategory) {
-      setCategory(cachedCategory);
-    }
+    setQuestions(
+      localStorage.getItem("questions")
+        ? JSON.parse(localStorage.getItem("questions"))
+        : []
+    );
+    setCategory(localStorage.getItem("category") || "");
+    setUsername(localStorage.getItem("username") || "");
+    setQuestionLimit(localStorage.getItem("questionLimit"));
   }, []);
 
   useEffect(() => {
-    if (!questions) {
-      fetch(`/api/questions/${category}/`)
-        .then((res) => {
-          console.log({ res });
-          return res.json();
+    if (category && !questions.length && questionLimit) {
+      fetch(`/api/questions?category=${category}&limit=${questionLimit}`)
+        .then((res) => res.json())
+        .then((questions) => {
+          localStorage.setItem("questions", JSON.stringify(questions));
+          setQuestions(questions);
         })
-        .then((questions) => setQuestions(questions))
         .catch((err) => console.error(err));
     }
-  }, []);
+  }, [questions, category, questionLimit]);
 
   return (
-    <div>{!username ? <LoginPopup /> : <GamePlay questions={questions} />}</div>
+    <div>{!!questions.length && username ? <GamePlay /> : <LoginPopup />}</div>
   );
 };
 

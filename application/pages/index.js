@@ -4,7 +4,7 @@ import css from "../styles/Home.module.css";
 import { useState, useEffect } from "react";
 
 export default function Home() {
-  const [cachedUsername, setCachedUsername] = useState(null);
+  const [storedUsername, setStoredUsername] = useState(null);
   const [username, setUsername] = useState("");
 
   const handleUsernameChange = (e) => {
@@ -26,27 +26,27 @@ export default function Home() {
   useEffect(() => {
     const gotUsername = localStorage.getItem("username");
     if (gotUsername) {
-      setCachedUsername(gotUsername);
+      setStoredUsername(gotUsername);
     }
   }, []);
 
   useEffect(() => {
     window.addEventListener("username", () => {
-      setCachedUsername(localStorage.getItem("username"));
+      setStoredUsername(localStorage.getItem("username"));
     });
 
     return () =>
       window.removeEventListener("username", () =>
-        setCachedUsername(localStorage.getItem("username"))
+        setStoredUsername(localStorage.getItem("username"))
       );
   }, []);
 
   return (
     <div className={css.container}>
       <main className={css.main}>
-        {cachedUsername ? (
+        {storedUsername ? (
           <Dashboard
-            cachedUsername={cachedUsername}
+            cachedUsername={storedUsername}
             handleLogout={handleLogout}
           />
         ) : (
