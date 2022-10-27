@@ -3,9 +3,10 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 const categories = ["JavaScript", "HTML", "mySQL"];
 
-const Dashboard = ({ cachedUsername, handleLogout }) => {
+const Dashboard = ({ handleLogout }) => {
   const [questions, setQuestions] = useState([]);
   const [questionLimit, setQuestionLimit] = useState(1);
+  const [username, setUsername] = useState("");
   const router = useRouter();
 
   const goToGame = () => router.push("/game");
@@ -30,6 +31,7 @@ const Dashboard = ({ cachedUsername, handleLogout }) => {
     if (storedQuestions) {
       setQuestions(JSON.parse(storedQuestions));
     }
+    setUsername(localStorage.getItem("username"));
   }, []);
 
   return (
@@ -51,7 +53,7 @@ const Dashboard = ({ cachedUsername, handleLogout }) => {
       ) : (
         <div>
           <p>
-            Welcome, <span>{cachedUsername}</span>
+            Welcome, <span>{username}</span>
           </p>
           <p>Please choose a category</p>
           {categories.map((category, i) => (
@@ -82,7 +84,6 @@ const Dashboard = ({ cachedUsername, handleLogout }) => {
 };
 
 Dashboard.propTypes = {
-  cachedUsername: PropTypes.string.isRequired,
   handleLogout: PropTypes.func.isRequired,
 };
 
