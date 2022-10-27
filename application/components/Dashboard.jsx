@@ -1,38 +1,97 @@
 import PropTypes from "prop-types";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 const categories = ["JavaScript", "HTML", "mySQL"];
 
-const Dashboard = ({ cachedUsername, handleLogout }) => {
+const Dashboard = ({ handleLogout }) => {
+  const [questions, setQuestions] = useState([]);
+  const [questionLimit, setQuestionLimit] = useState(1);
+  const [username, setUsername] = useState("");
   const router = useRouter();
 
-  const selectCategory = (category) => {
-    console.log({ category });
-    const limit = 5;
-    router.push(`/game/${category}?limit=${limit}`);
+  const goToGame = () => router.push("/game");
+
+  const returnToGameOptions = () => {
+    localStorage.setItem("questions", "")
+    localStorage.setItem("questionIndex", 0)
+    localStorage.setItem("category", "")
+    localStorage.setItem("questionLimit", 1)
+    localStorage.setItem("selectedAnswers", "");
+    router.reload();
   };
+
+  const storeCategory = (category) =>
+    localStorage.setItem("category", category);
+
+  const storeQuestionLimit = (event) => {
+    localStorage.setItem("questionLimit", event.target.value);
+    setQuestionLimit(Number(event.target.value));
+  };
+
+  useEffect(() => {
+    const storedQuestions = localStorage.getItem("questions");
+    if (storedQuestions) {
+      setQuestions(JSON.parse(storedQuestions));
+    }
+    
+    setUsername(localStorage.getItem("username"));
+
+    if(!localStorage.getItem("questionLimit")) {
+      setQuestionLimit(1);
+      localStorage.setItem("questionLimit", 1);
+    }
+  }, []);
 
   return (
     <div>
       <h1>Dashboard</h1>
-      <p>
-        Welcome, <span>{cachedUsername}</span>
-      </p>
-      <p>Please choose a category</p>
-      {categories.map((category, i) => (
-        <button key={category} onClick={() => selectCategory(category)}>
-          {category}
-        </button>
-      ))}
-      <br />
-      <button type="button" onClick={handleLogout}>
-        Logout
-      </button>
+      {questions.length ? (
+        <div>
+          <p>
+            You are currently half way through a previous game. What would you
+            like to do?
+          </p>
+          <button type="button" onClick={goToGame}>
+            Continue
+          </button>
+          <button type="button" onClick={returnToGameOptions}>
+            New Game
+          </button>
+        </div>
+      ) : (
+        <div>
+          <p>
+            Welcome, <span>{username}</span>
+          </p>
+          <p>Please choose a category</p>
+          {categories.map((category, i) => (
+            <button key={category} onClick={() => storeCategory(category)}>
+              {category}
+            </button>
+          ))}
+          <label htmlFor="question-limit">How many questions?</label>
+          <input
+            type="number"
+            step="1"
+            min="1"
+            onChange={storeQuestionLimit}
+            value={questionLimit}
+          />
+          <br />
+          <button type="button" onClick={goToGame}>
+            Play
+          </button>
+          <br />
+          <button type="button" onClick={handleLogout}>
+            Logout
+          </button>
+        </div>
+      )}
     </div>
   );
 };
 
 Dashboard.propTypes = {
-  cachedUsername: PropTypes.string.isRequired,
   handleLogout: PropTypes.func.isRequired,
 };
 

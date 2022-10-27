@@ -1,5 +1,62 @@
-import Home from "../components/pageContainers/Home";
+import Login from "../components/Login";
+import Dashboard from "../components/Dashboard";
+import css from "../styles/Home.module.css";
+import { useState, useEffect } from "react";
 
-export default function Container() {
-  return (<Home />);
+export default function Home() {
+  const [storedUsername, setStoredUsername] = useState(null);
+  const [username, setUsername] = useState("");
+
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
+  };
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    localStorage.setItem("username", username);
+    window.dispatchEvent(new Event("username"));
+    setUsername("");
+  };
+
+  const handleLogout = () => {
+    localStorage.setItem("username", "");
+    window.dispatchEvent(new Event("username"));
+  };
+
+  useEffect(() => {
+    const gotUsername = localStorage.getItem("username");
+    if (gotUsername) {
+      setStoredUsername(gotUsername);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("username", () => {
+      setStoredUsername(localStorage.getItem("username"));
+    });
+
+    return () =>
+      window.removeEventListener("username", () =>
+        setStoredUsername(localStorage.getItem("username"))
+      );
+  }, []);
+
+  return (
+    <div className={css.container}>
+      <main className={css.main}>
+        {storedUsername ? (
+          <Dashboard
+            cachedUsername={storedUsername}
+            handleLogout={handleLogout}
+          />
+        ) : (
+          <Login
+            username={username}
+            handleLogin={handleLogin}
+            handleUsernameChange={handleUsernameChange}
+          />
+        )}
+      </main>
+    </div>
+  );
 }

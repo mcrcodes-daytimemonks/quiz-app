@@ -6,30 +6,47 @@ exports[`Dashboard matches snapshot 1`] = `
     <h1>
       Dashboard
     </h1>
-    <p>
-      Welcome, 
-      <span>
-        username
-      </span>
-    </p>
-    <p>
-      Please choose a category
-    </p>
-    <button>
-      JavaScript
-    </button>
-    <button>
-      HTML
-    </button>
-    <button>
-      mySQL
-    </button>
-    <br />
-    <button
-      type="button"
-    >
-      Logout
-    </button>
+    <div>
+      <p>
+        Welcome, 
+        <span />
+      </p>
+      <p>
+        Please choose a category
+      </p>
+      <button>
+        JavaScript
+      </button>
+      <button>
+        HTML
+      </button>
+      <button>
+        mySQL
+      </button>
+      <label
+        for="question-limit"
+      >
+        How many questions?
+      </label>
+      <input
+        min="1"
+        step="1"
+        type="number"
+        value="1"
+      />
+      <br />
+      <button
+        type="button"
+      >
+        Play
+      </button>
+      <br />
+      <button
+        type="button"
+      >
+        Logout
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
