@@ -12,9 +12,10 @@ const Dashboard = ({ handleLogout }) => {
   const goToGame = () => router.push("/game");
 
   const returnToGameOptions = () => {
-    ["questions", "questionIndex", "category"].forEach((key) =>
-      localStorage.setItem(key, "")
-    );
+    localStorage.setItem("questions", "")
+    localStorage.setItem("questionIndex", 0)
+    localStorage.setItem("category", "")
+    localStorage.setItem("questionLimit", 1)
     router.reload();
   };
 
@@ -31,7 +32,13 @@ const Dashboard = ({ handleLogout }) => {
     if (storedQuestions) {
       setQuestions(JSON.parse(storedQuestions));
     }
+    
     setUsername(localStorage.getItem("username"));
+
+    if(!localStorage.getItem("questionLimit")) {
+      setQuestionLimit(1);
+      localStorage.setItem("questionLimit", 1);
+    }
   }, []);
 
   return (
