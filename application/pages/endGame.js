@@ -25,4 +25,4 @@ const EndGame = () => {
   return <div>endGame</div>;
 };
 
-export default endGame;
+export default EndGame;
