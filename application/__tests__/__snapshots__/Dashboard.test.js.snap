@@ -6,47 +6,74 @@ exports[`Dashboard matches snapshot 1`] = `
     <h1>
       Dashboard
     </h1>
-    <div>
-      <p>
-        Welcome, 
-        <span />
-      </p>
-      <p>
-        Please choose a category
-      </p>
-      <button>
-        JavaScript
-      </button>
-      <button>
-        HTML
-      </button>
-      <button>
-        mySQL
-      </button>
-      <label
-        for="question-limit"
-      >
-        How many questions?
-      </label>
-      <input
-        min="1"
-        step="1"
-        type="number"
-        value="1"
-      />
-      <br />
+    <p>
+      Hi, 
+      <span />
+    </p>
+    <form
+      class="GameOptions__grid"
+      name="game-options"
+    >
+      <fieldset>
+        <legend>
+          Please choose a category
+        </legend>
+        <div>
+          <input
+            id="JavaScript"
+            name="category"
+            required=""
+            type="radio"
+            value="JavaScript"
+          />
+          <label
+            for="JavaScript"
+          >
+            JavaScript
+          </label>
+        </div>
+        <div>
+          <input
+            id="HTML"
+            name="category"
+            required=""
+            type="radio"
+            value="HTML"
+          />
+          <label
+            for="HTML"
+          >
+            HTML
+          </label>
+        </div>
+      </fieldset>
+      <div>
+        <label
+          for="questionCount"
+        >
+          Number of questions: 
+        </label>
+        <input
+          id="questionCount"
+          max="5"
+          min="1"
+          required=""
+          step="1"
+          type="number"
+          value="3"
+        />
+      </div>
       <button
-        type="button"
+        type="submit"
       >
-        Play
+        Play Game
       </button>
-      <br />
-      <button
-        type="button"
-      >
-        Logout
-      </button>
-    </div>
+    </form>
+    <button
+      type="button"
+    >
+      Logout
+    </button>
   </div>
 </DocumentFragment>
 `;

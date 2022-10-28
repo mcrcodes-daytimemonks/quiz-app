@@ -1,31 +1,22 @@
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-const categories = ["JavaScript", "HTML", "mySQL"];
+import GameOptions from "./GameOptions";
 
 const Dashboard = ({ handleLogout }) => {
   const [questions, setQuestions] = useState([]);
-  const [questionLimit, setQuestionLimit] = useState(1);
   const [username, setUsername] = useState("");
   const router = useRouter();
 
   const goToGame = () => router.push("/game");
 
   const returnToGameOptions = () => {
-    localStorage.setItem("questions", "")
-    localStorage.setItem("questionIndex", 0)
-    localStorage.setItem("category", "")
-    localStorage.setItem("questionLimit", 1)
+    localStorage.setItem("questions", "");
+    localStorage.setItem("questionIndex", 0);
+    localStorage.setItem("category", "");
+    localStorage.setItem("questionLimit", 1);
     localStorage.setItem("selectedAnswers", "");
     router.reload();
-  };
-
-  const storeCategory = (category) =>
-    localStorage.setItem("category", category);
-
-  const storeQuestionLimit = (event) => {
-    localStorage.setItem("questionLimit", event.target.value);
-    setQuestionLimit(Number(event.target.value));
   };
 
   useEffect(() => {
@@ -33,18 +24,15 @@ const Dashboard = ({ handleLogout }) => {
     if (storedQuestions) {
       setQuestions(JSON.parse(storedQuestions));
     }
-    
     setUsername(localStorage.getItem("username"));
-
-    if(!localStorage.getItem("questionLimit")) {
-      setQuestionLimit(1);
-      localStorage.setItem("questionLimit", 1);
-    }
   }, []);
 
   return (
     <div>
       <h1>Dashboard</h1>
+      <p>
+        Hi, <span>{username}</span>
+      </p>
       {questions.length ? (
         <div>
           <p>
@@ -59,34 +47,11 @@ const Dashboard = ({ handleLogout }) => {
           </button>
         </div>
       ) : (
-        <div>
-          <p>
-            Welcome, <span>{username}</span>
-          </p>
-          <p>Please choose a category</p>
-          {categories.map((category, i) => (
-            <button key={category} onClick={() => storeCategory(category)}>
-              {category}
-            </button>
-          ))}
-          <label htmlFor="question-limit">How many questions?</label>
-          <input
-            type="number"
-            step="1"
-            min="1"
-            onChange={storeQuestionLimit}
-            value={questionLimit}
-          />
-          <br />
-          <button type="button" onClick={goToGame}>
-            Play
-          </button>
-          <br />
-          <button type="button" onClick={handleLogout}>
-            Logout
-          </button>
-        </div>
+        <GameOptions />
       )}
+      <button type="button" onClick={handleLogout}>
+        Logout
+      </button>
     </div>
   );
 };
