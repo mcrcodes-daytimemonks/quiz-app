@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const endGame = () => {
+const EndGame = () => {
   // collect users answers and username
   // send them to the server
   // check their correct/incorrect statuses
