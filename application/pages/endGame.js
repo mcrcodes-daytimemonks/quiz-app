@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Score from '../components/Score';
 
 const endGame = () => {
   // collect users answers and username
@@ -7,6 +8,8 @@ const endGame = () => {
   // return results to page
   // render results in a pleasing and informative way
   // would be nice to see a leaderboard....
+
+  const [scores, setScores] = useState([]);
 
   useEffect(() => {
     const selectedAnswers = localStorage.getItem("selectedAnswers");
@@ -19,10 +22,18 @@ const endGame = () => {
       body: JSON.stringify(selectedAnswers)
     })
       .then((res) => res.json())
-      .then((data) => console.log(data))
+      .then((data) => {
+        setScores(data);
+        console.log(data);
+      })
       .catch((err) => console.log(err));
   }, []);
-  return <div>endGame</div>;
+  return (
+    <div>
+      <h1>endGame</h1>
+      {scores && <Score data={scores} />}
+    </div>
+  );
 };
 
 export default endGame;
