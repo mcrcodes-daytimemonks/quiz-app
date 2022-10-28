@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Score from '../components/Score';
 
-const endGame = () => {
+const EndGame = () => {
   // collect users answers and username
   // send them to the server
   // check their correct/incorrect statuses
@@ -30,10 +30,10 @@ const endGame = () => {
   }, []);
   return (
     <div>
-      <h1>endGame</h1>
+      <h1>EndGame</h1>
       {scores && <Score data={scores} />}
     </div>
   );
 };
 
-export default endGame;
+export default EndGame;
