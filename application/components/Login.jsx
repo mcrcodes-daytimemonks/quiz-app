@@ -1,20 +1,16 @@
 import PropTypes from "prop-types";
+import { signIn } from "next-auth/react";
 
-const Login = ({ username, handleUsernameChange, handleLogin }) => {
+const Login = () => {
+
   return (
     <div>
-      <h1>Login</h1>
-      <form onSubmit={handleLogin}>
-        <label htmlFor="username">Enter Your Name:</label>
-        <input
-          type="text"
-          name="username"
-          id="username"
-          onChange={handleUsernameChange}
-          maxLength="35"
-          value={username}
-        />
-        <button type="submit">Login</button>
+      <p>Hey there stranger!
+      <br />
+      <br />
+      Please sign in so that we can get to know you better!</p>
+      <form onSubmit={signIn}>
+        <button type="submit">Sign In</button>
       </form>
     </div>
   );

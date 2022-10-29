@@ -10,12 +10,6 @@ const GamePlay = () => {
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [selectedAnswersCount, setSelectedAnswersCount] = useState(0);
 
-  console.log({
-    questionIndex,
-    questionLimit,
-    selectedAnswersCount,
-  });
-
   const handleAnswerSelection = (event) => {
     setSelectedAnswer(event.target.value);
   };
@@ -26,7 +20,6 @@ const GamePlay = () => {
   }
 
   const handleAnswerSubmit = () => {
-    // store the submitted answer along with the current answer's id
     const storedSelectedAnswers = localStorage.getItem("selectedAnswers");
     if (!storedSelectedAnswers) {
       localStorage.setItem(
