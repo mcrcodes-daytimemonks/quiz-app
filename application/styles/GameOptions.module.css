@@ -7,11 +7,10 @@
 
 .categories {
   display: grid;
-  border: none;
-  padding: 0;
+  border: var(--bttn-primary-bg) 1px solid;
+  padding: 1rem;
   margin: 0;
 }
-
 
 .category__input {
   display: grid;
