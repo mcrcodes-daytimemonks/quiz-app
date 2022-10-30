@@ -10,9 +10,18 @@
   src: url("/fonts/Gilroy-ExtraBold.otf") format("opentype");
 }
 
-/* :root {
-  --font-family: url("/fonts/Gilroy-Light.otf");
-} */
+/* COLOUR SCHEME */
+
+:root {
+  --bttn-primary-bg: rgb(255, 0, 67);
+  --bttn-primary-color: #fff;
+  --bttn-secondary-bg: rgb(0, 214, 242);
+  --bttn-secondary-color: #000;
+  --bttn-border-rad: 50px;
+  --bttn-padding: 0 1.5rem;
+  --bttn-outline: none;
+  --bttn-text-align: center;
+}
 
 html,
 body {
