@@ -34,7 +34,13 @@ const Game = () => {
   }, [questions, category, questionLimit]);
 
   return (
-    <div>{!!questions.length && username ? <GamePlay /> : <LoginPopup />}</div>
+    <div>
+      {!username ? (
+        <LoginPopup />
+      ) : (
+        <div>{!!questions.length && <GamePlay />} </div>
+      )}
+    </div>
   );
 };
 
