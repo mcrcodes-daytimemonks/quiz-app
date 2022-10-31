@@ -1,5 +1,6 @@
+import router from "next/router";
 import { useEffect, useState } from "react";
-import Score from '../components/Score';
+import Score from "../components/Score";
 import deleteStoredGameData from "../utils/deleteStoredGameData";
 
 const EndGame = () => {
@@ -11,6 +12,7 @@ const EndGame = () => {
   // would be nice to see a leaderboard....
 
   const [scores, setScores] = useState([]);
+  const returnToStart = () => router.push("/");
 
   useEffect(() => {
     const selectedAnswers = localStorage.getItem("selectedAnswers");
@@ -21,7 +23,7 @@ const EndGame = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(selectedAnswers)
+      body: JSON.stringify(selectedAnswers),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -34,6 +36,7 @@ const EndGame = () => {
     <div>
       <h1>EndGame</h1>
       {!!scores.length && <Score data={scores} />}
+      <button onClick={returnToStart}>Back to start</button>
     </div>
   );
 };
