@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Score from '../components/Score';
+import deleteStoredGameData from "../utils/deleteStoredGameData";
 
 const EndGame = () => {
   // collect users answers and username
@@ -13,7 +14,8 @@ const EndGame = () => {
 
   useEffect(() => {
     const selectedAnswers = localStorage.getItem("selectedAnswers");
-    
+    deleteStoredGameData();
+
     fetch("/api/getGameResults", {
       method: "POST",
       headers: {

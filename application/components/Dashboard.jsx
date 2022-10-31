@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import GameOptions from "./GameOptions";
 import { signOut, useSession } from "next-auth/react";
+import deleteStoredGameData from "../utils/deleteStoredGameData";
 
 const Dashboard = () => {
   const [questions, setQuestions] = useState([]);
@@ -12,11 +13,7 @@ const Dashboard = () => {
   const goToGame = () => router.push("/game");
 
   const returnToGameOptions = () => {
-    localStorage.setItem("questions", "");
-    localStorage.setItem("questionIndex", 0);
-    localStorage.setItem("category", "");
-    localStorage.setItem("questionLimit", 1);
-    localStorage.setItem("selectedAnswers", "");
+    deleteStoredGameData();
     router.reload();
   };
 
