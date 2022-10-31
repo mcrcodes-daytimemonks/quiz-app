@@ -43,11 +43,11 @@ const GameOptions = () => {
       name="game-options"
       onSubmit={goToGame}
     >
-      <fieldset>
+      <fieldset className={css.categories}>
         <legend>Please choose a category</legend>
 
         {INIT.CATEGORIES.map((category) => (
-          <div key={category}>
+          <div className={css.category__input}key={category}>
             <input
               checked={category === selectedCategory}
               id={category}
@@ -57,7 +57,8 @@ const GameOptions = () => {
               type="radio"
               value={category}
             />
-            <label htmlFor={category}>{category}</label>
+            <label className="radio-bttn-label"
+            htmlFor={category}>{category}</label>
           </div>
         ))}
       </fieldset>
@@ -75,7 +76,7 @@ const GameOptions = () => {
           value={selectedQuestionLimit}
         />
       </div>
-      <button type="submit">Play Game</button>
+      <button className="button primary" type="submit">Play Game</button>
     </form>
   );
 };
