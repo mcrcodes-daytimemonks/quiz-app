@@ -28,6 +28,26 @@ export default async function getGameResults(selectedAnswers) {
         ).selectedAnswer,
       });
     });
+
+    await db.$disconnect();
+
+    const isCorrectAnswer = (a, b) => {
+      return a === b;
+    };
+
+    return dbQuestions
+      .map((answeredQuestion) => ({
+        question: answeredQuestion.question,
+        id: answeredQuestion.id,
+        correctAnswer: answeredQuestion.answers[0],
+        answer: selectedAnswers.find(
+          (selectedAnswer) => selectedAnswer.questionId == answeredQuestion.id
+        ).selectedAnswer,
+        isCorrect: isCorrectAnswer(selectedAnswers.find(
+          (selectedAnswer) => selectedAnswer.questionId == answeredQuestion.id
+        ).selectedAnswer, answeredQuestion.answers[0])
+      }));
+
   } catch (err) {
     console.error(err);
     await db.$disconnect();
