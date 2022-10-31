@@ -3,22 +3,34 @@
 exports[`Dashboard matches snapshot 1`] = `
 <DocumentFragment>
   <div>
+    Signed in as Michael Shields
+    <button
+      type="button"
+    >
+      Sign Out
+    </button>
     <h1>
       Dashboard
     </h1>
     <p>
-      Hi, 
-      <span />
+      Hey, 
+      <span>
+        Michael!
+      </span>
     </p>
     <form
       class="GameOptions__grid"
       name="game-options"
     >
-      <fieldset>
+      <fieldset
+        class="categories"
+      >
         <legend>
           Please choose a category
         </legend>
-        <div>
+        <div
+          class="category__input"
+        >
           <input
             id="JavaScript"
             name="category"
@@ -27,12 +39,15 @@ exports[`Dashboard matches snapshot 1`] = `
             value="JavaScript"
           />
           <label
+            class="radio-bttn-label"
             for="JavaScript"
           >
             JavaScript
           </label>
         </div>
-        <div>
+        <div
+          class="category__input"
+        >
           <input
             id="HTML"
             name="category"
@@ -41,6 +56,7 @@ exports[`Dashboard matches snapshot 1`] = `
             value="HTML"
           />
           <label
+            class="radio-bttn-label"
             for="HTML"
           >
             HTML
@@ -64,16 +80,13 @@ exports[`Dashboard matches snapshot 1`] = `
         />
       </div>
       <button
+        class="button primary"
         type="submit"
       >
         Play Game
       </button>
     </form>
-    <button
-      type="button"
-    >
-      Logout
-    </button>
   </div>
+  );
 </DocumentFragment>
 `;
