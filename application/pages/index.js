@@ -2,10 +2,14 @@ import Login from "../components/Login";
 import Dashboard from "../components/Dashboard";
 import css from "../styles/Home.module.css";
 import { useState, useEffect } from "react";
+import { useSession } from "next-auth/react";
 
 export default function Home() {
+  const { data: session } = useSession();
   const [storedUsername, setStoredUsername] = useState(null);
   const [username, setUsername] = useState("");
+
+  console.log({session});
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -44,17 +48,20 @@ export default function Home() {
   return (
     <div className={css.container}>
       <main className={css.main}>
-        {storedUsername ? (
-          <Dashboard
-            cachedUsername={storedUsername}
-            handleLogout={handleLogout}
-          />
+        {!session ? (
+          <>
+            <Login
+              handleLogin={handleLogin}
+              handleUsernameChange={handleUsernameChange}
+            />
+          </>
         ) : (
-          <Login
-            username={username}
-            handleLogin={handleLogin}
-            handleUsernameChange={handleUsernameChange}
-          />
+          <>
+            <Dashboard
+              cachedUsername={storedUsername}
+              handleLogout={handleLogout}
+            />
+          </>
         )}
       </main>
     </div>

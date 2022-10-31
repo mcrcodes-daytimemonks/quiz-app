@@ -2,10 +2,11 @@ import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import GameOptions from "./GameOptions";
+import { signOut, useSession } from "next-auth/react";
 
-const Dashboard = ({ handleLogout }) => {
+const Dashboard = () => {
   const [questions, setQuestions] = useState([]);
-  const [username, setUsername] = useState("");
+  const { data: session } = useSession();
   const router = useRouter();
 
   const goToGame = () => router.push("/game");
@@ -24,14 +25,17 @@ const Dashboard = ({ handleLogout }) => {
     if (storedQuestions) {
       setQuestions(JSON.parse(storedQuestions));
     }
-    setUsername(localStorage.getItem("username"));
   }, []);
 
   return (
     <div>
+      Signed in as {session.user.name}
+      <button type="button" onClick={signOut}>
+        Sign Out
+      </button>
       <h1>Dashboard</h1>
       <p>
-        Hi, <span>{username}</span>
+        Hey, <span>{session.user.name.split(" ")[0]}!</span>
       </p>
       {questions.length ? (
         <div>
@@ -42,6 +46,8 @@ const Dashboard = ({ handleLogout }) => {
           <button type="button" onClick={goToGame}>
             Continue
           </button>
+          <br />
+          <br />
           <button type="button" onClick={returnToGameOptions}>
             New Game
           </button>
@@ -49,9 +55,6 @@ const Dashboard = ({ handleLogout }) => {
       ) : (
         <GameOptions />
       )}
-      <button type="button" onClick={handleLogout}>
-        Logout
-      </button>
     </div>
   );
 };
