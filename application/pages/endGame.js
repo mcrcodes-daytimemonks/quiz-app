@@ -31,7 +31,7 @@ const EndGame = () => {
   return (
     <div>
       <h1>EndGame</h1>
-      {scores && <Score data={scores} />}
+      {!!scores.length && <Score data={scores} />}
     </div>
   );
 };

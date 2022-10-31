@@ -8,7 +8,7 @@ const Score = (props) => {
       <h1>Score Component</h1>
       {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
       <p>
-        You scored {numCorrect} out of {data.length}
+        You scored {numCorrect} out of {data.length}.  {numCorrect === data.length ? "Congratulations you scored 100%" : "Keep learning"}.
       </p>
       <div>
         {data.map((result) => (
