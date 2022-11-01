@@ -1,5 +1,4 @@
 import deleteStoredGameData from "../utils/deleteStoredGameData";
-import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 const gameDataItems = [
