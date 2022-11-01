@@ -17,31 +17,42 @@ const GamePlay = () => {
   const handleEndGame = () => {
     handleAnswerSubmit();
     router.push("/endGame");
-  }
+  };
 
-  const handleAnswerSubmit = () => {
-    const storedSelectedAnswers = localStorage.getItem("selectedAnswers");
-    if (!storedSelectedAnswers) {
+  const updateStoredSelectedAnswers = (currentQuestion, selectedAnswer) => {
+    let storedSelectedAnswers;
+
+    try {
+      storedSelectedAnswers = JSON.parse(
+        localStorage.getItem("selectedAnswers")
+      );
+    } catch (err) {
+      console.error(err);
+    }
+
+    if (Array.isArray(storedSelectedAnswers)) {
+      localStorage.setItem(
+        "selectedAnswers",
+        JSON.stringify([
+          ...storedSelectedAnswers,
+          { questionId: currentQuestion.id, selectedAnswer },
+        ])
+      );
+    } else {
       localStorage.setItem(
         "selectedAnswers",
         JSON.stringify([{ questionId: currentQuestion.id, selectedAnswer }])
       );
-    } else {
-      const selectedAnswers = JSON.parse(
-        localStorage.getItem("selectedAnswers")
-      );
-
-      localStorage.setItem(
-        "selectedAnswers",
-        JSON.stringify([
-          ...selectedAnswers,
-          { questionId: currentQuestion.id, selectedAnswer },
-        ])
-      );
     }
+  };
+
+  const handleAnswerSubmit = () => {
+    updateStoredSelectedAnswers(currentQuestion, selectedAnswer);
     incrementQuestionIndex();
     setSelectedAnswer("");
-    setSelectedAnswersCount(JSON.parse(localStorage.getItem("selectedAnswers")).length);
+    setSelectedAnswersCount(
+      JSON.parse(localStorage.getItem("selectedAnswers")).length
+    );
   };
 
   useEffect(() => {
@@ -100,7 +111,7 @@ const GamePlay = () => {
       </fieldset>
       <br />
       {Number(questionIndex) === Number(questionLimit - 1) &&
-      Number(selectedAnswersCount) === Number(questionLimit -1) ? (
+      Number(selectedAnswersCount) === Number(questionLimit - 1) ? (
         <button disabled={!selectedAnswer} onClick={handleEndGame}>
           End Game
         </button>
