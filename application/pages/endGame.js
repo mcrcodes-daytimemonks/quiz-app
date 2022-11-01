@@ -1,9 +1,10 @@
-import router from "next/router";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Score from "../components/Score";
 import deleteStoredGameData from "../utils/deleteStoredGameData";
 
 const EndGame = () => {
+  const router = useRouter();
   const [scores, setScores] = useState([]);
   const goToHomePage = () => router.push("/");
 
