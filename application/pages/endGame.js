@@ -24,7 +24,6 @@ const EndGame = () => {
   }, []);
   return (
     <div>
-      <h1>EndGame</h1>
       {!!scores.length && <Score data={scores} />}
       <button onClick={goToHomePage}>Back to start</button>
     </div>
