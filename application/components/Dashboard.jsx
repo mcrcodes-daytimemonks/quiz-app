@@ -10,6 +10,8 @@ const Dashboard = () => {
   const { data: session } = useSession();
   const router = useRouter();
 
+  console.log({ session });
+
   const goToGame = () => router.push("/game");
 
   const returnToGameOptions = () => {
