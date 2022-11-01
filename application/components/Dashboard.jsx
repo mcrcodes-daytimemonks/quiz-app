@@ -32,7 +32,7 @@ const Dashboard = () => {
       </button>
       <h1>Dashboard</h1>
       <p>
-        Hey, <span>{session.user.name.split(" ")[0]}!</span>
+        Hey, <span>{session?.user?.name?.split(" ")[0]}!</span>
       </p>
       {questions.length ? (
         <div>
