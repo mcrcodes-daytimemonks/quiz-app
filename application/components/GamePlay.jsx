@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import router from "next/router";
+import updateStoredSelectedAnswers from "../utils/updateStoredSelectedAnswers";
 
 const GamePlay = () => {
   const [questionLimit, setQuestionLimit] = useState(0);
@@ -17,33 +18,6 @@ const GamePlay = () => {
   const handleEndGame = () => {
     handleAnswerSubmit();
     router.push("/endGame");
-  };
-
-  const updateStoredSelectedAnswers = (currentQuestion, selectedAnswer) => {
-    let storedSelectedAnswers;
-
-    try {
-      storedSelectedAnswers = JSON.parse(
-        localStorage.getItem("selectedAnswers")
-      );
-    } catch (err) {
-      console.error(err);
-    }
-
-    if (Array.isArray(storedSelectedAnswers)) {
-      localStorage.setItem(
-        "selectedAnswers",
-        JSON.stringify([
-          ...storedSelectedAnswers,
-          { questionId: currentQuestion.id, selectedAnswer },
-        ])
-      );
-    } else {
-      localStorage.setItem(
-        "selectedAnswers",
-        JSON.stringify([{ questionId: currentQuestion.id, selectedAnswer }])
-      );
-    }
   };
 
   const handleAnswerSubmit = () => {
