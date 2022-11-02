@@ -10,25 +10,19 @@ const Game = () => {
   const [questionLimit, setQuestionLimit] = useState(null);
   const [questions, setQuestions] = useState(null);
   const router = useRouter();
-  
-  useEffect(() => {
-    if(!(category && questionLimit)) {
-      router.push("/")
-    };
-  }, [])
 
   useEffect(() => {
     setCategory(localStorage.getItem("category"));
     setQuestionLimit(localStorage.getItem("questionLimit"));
-    
+
     let storedQuestions;
     try {
       storedQuestions = JSON.parse(localStorage.getItem("questions"));
     } catch (err) {
-      console.error(err)
+      console.error(err);
     }
-    if(Array.isArray(storedQuestions) && storedQuestions.length) {
-      setQuestions(storedQuestions)
+    if (Array.isArray(storedQuestions) && storedQuestions.length) {
+      setQuestions(storedQuestions);
     }
   }, []);
 
