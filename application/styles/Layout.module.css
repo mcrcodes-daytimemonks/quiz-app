@@ -1,0 +1,12 @@
+.Layout__header {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    padding: 1rem;
+    background-color: var(--color-primary);
+}
+
+.Layout__content {
+    position: fixed;
+    inset: 0 0 0 0;
+}
