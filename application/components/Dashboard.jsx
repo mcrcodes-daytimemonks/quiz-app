@@ -27,7 +27,6 @@ const Dashboard = () => {
 
   return (
     <div>
-      <pre>{JSON.stringify(session, null, 2)}</pre>
       {session.user.name ? `Signed in as ${session.user.name}` : "Guest" }
 
       <button type="button" onClick={signOut}>
