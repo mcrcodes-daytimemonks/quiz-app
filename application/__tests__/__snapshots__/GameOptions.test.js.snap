@@ -6,11 +6,15 @@ exports[`GameOptions matches snapshot 1`] = `
     class="GameOptions__grid"
     name="game-options"
   >
-    <fieldset>
+    <fieldset
+      class="categories"
+    >
       <legend>
         Please choose a category
       </legend>
-      <div>
+      <div
+        class="category__input"
+      >
         <input
           id="JavaScript"
           name="category"
@@ -19,12 +23,15 @@ exports[`GameOptions matches snapshot 1`] = `
           value="JavaScript"
         />
         <label
+          class="radio-bttn-label"
           for="JavaScript"
         >
           JavaScript
         </label>
       </div>
-      <div>
+      <div
+        class="category__input"
+      >
         <input
           id="HTML"
           name="category"
@@ -33,6 +40,7 @@ exports[`GameOptions matches snapshot 1`] = `
           value="HTML"
         />
         <label
+          class="radio-bttn-label"
           for="HTML"
         >
           HTML
@@ -56,6 +64,7 @@ exports[`GameOptions matches snapshot 1`] = `
       />
     </div>
     <button
+      class="button primary"
       type="submit"
     >
       Play Game

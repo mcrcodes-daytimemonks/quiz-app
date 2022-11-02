@@ -3,26 +3,17 @@
 exports[`Login matches snapshot 1`] = `
 <DocumentFragment>
   <div>
-    <h1>
-      Login
-    </h1>
+    <p>
+      Hey there stranger!
+      <br />
+      <br />
+      Please sign in so that we can get to know you better!
+    </p>
     <form>
-      <label
-        for="username"
-      >
-        Enter Your Name:
-      </label>
-      <input
-        id="username"
-        maxlength="35"
-        name="username"
-        type="text"
-        value="username"
-      />
       <button
         type="submit"
       >
-        Login
+        Sign In
       </button>
     </form>
   </div>

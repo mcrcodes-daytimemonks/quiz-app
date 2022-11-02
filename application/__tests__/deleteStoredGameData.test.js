@@ -1,25 +1,20 @@
 import deleteStoredGameData from "../utils/deleteStoredGameData";
-import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-const gameData = {
-  questions: "test",
-  questionIndex: 3,
-  category: "HTML",
-  questionLimit: 5,
-  selectedAnswers: ["one", "two", "three"],
-};
+const gameDataItems = [
+  "questions",
+  "questionIndex",
+  "category",
+  "questionLimit",
+  "selectedAnswers",
+];
 
 describe("deleteStoredGameData", () => {
-  it("should delete game data from localStorage", () => {
-    for (const key in gameData) {
-      localStorage.setItem([key], gameData[key]);
-    }
+  it("should remove game data items from localStorage", () => {
+    gameDataItems.forEach(item => localStorage.setItem([item], "test value"));
 
     deleteStoredGameData();
 
-    for (const key in gameData) {
-      expect(localStorage.getItem([key])).toBeFalsy();
-    }
+    gameDataItems.forEach(item => expect(localStorage.getItem([item])).toBeFalsy());
   });
 });

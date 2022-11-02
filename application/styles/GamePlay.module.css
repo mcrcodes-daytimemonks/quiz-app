@@ -1,0 +1,18 @@
+.GamePlay__grid {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.answers {
+  display: grid;
+  border: var(--bttn-primary-bg) 1px solid;
+  padding: 1rem;
+  margin: 0;
+}
+
+.answer__input {
+  display: grid;
+  padding: 0.25rem 0;
+}

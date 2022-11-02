@@ -1,3 +1,5 @@
+import css from "../styles/Score.module.css";
+
 const Score = (props) => {
   const { data } = props;
 
@@ -21,7 +23,9 @@ const Score = (props) => {
             }}
           >
           <div>
-            <p>{result.question}</p>
+            <p className={result.isCorrect ? css.correct : css.wrong}>
+              {result.question}
+            </p>
             {!result.isCorrect && <p> Correct Answer: {result.correctAnswer}</p>}
           </div>
             <p>{result.isCorrect ? "tick" : "cross"}</p>

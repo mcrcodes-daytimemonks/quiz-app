@@ -9,26 +9,84 @@ exports[`Home matches snapshot 1`] = `
       class="main"
     >
       <div>
-        <h1>
-          Login
-        </h1>
-        <form>
-          <label
-            for="username"
+        Signed in as Jane Doe
+        <button
+          type="button"
+        >
+          Sign Out
+        </button>
+        <p>
+          Hey, 
+          <span>
+            Jane!
+          </span>
+        </p>
+        <form
+          class="GameOptions__grid"
+          name="game-options"
+        >
+          <fieldset
+            class="categories"
           >
-            Enter Your Name:
-          </label>
-          <input
-            id="username"
-            maxlength="35"
-            name="username"
-            type="text"
-            value=""
-          />
+            <legend>
+              Please choose a category
+            </legend>
+            <div
+              class="category__input"
+            >
+              <input
+                id="JavaScript"
+                name="category"
+                required=""
+                type="radio"
+                value="JavaScript"
+              />
+              <label
+                class="radio-bttn-label"
+                for="JavaScript"
+              >
+                JavaScript
+              </label>
+            </div>
+            <div
+              class="category__input"
+            >
+              <input
+                id="HTML"
+                name="category"
+                required=""
+                type="radio"
+                value="HTML"
+              />
+              <label
+                class="radio-bttn-label"
+                for="HTML"
+              >
+                HTML
+              </label>
+            </div>
+          </fieldset>
+          <div>
+            <label
+              for="questionCount"
+            >
+              Number of questions: 
+            </label>
+            <input
+              id="questionCount"
+              max="5"
+              min="1"
+              required=""
+              step="1"
+              type="number"
+              value="3"
+            />
+          </div>
           <button
+            class="button primary"
             type="submit"
           >
-            Login
+            Play Game
           </button>
         </form>
       </div>

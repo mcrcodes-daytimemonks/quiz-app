@@ -1,0 +1,8 @@
+.Layout__header {
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--color-primary);
+    position: sticky;
+    top: 0;
+}

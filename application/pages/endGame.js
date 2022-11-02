@@ -1,18 +1,12 @@
-import router from "next/router";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Score from "../components/Score";
 import deleteStoredGameData from "../utils/deleteStoredGameData";
 
 const EndGame = () => {
-  // collect users answers and username
-  // send them to the server
-  // check their correct/incorrect statuses
-  // return results to page
-  // render results in a pleasing and informative way
-  // would be nice to see a leaderboard....
-
+  const router = useRouter();
   const [scores, setScores] = useState([]);
-  const returnToStart = () => router.push("/");
+  const goToHomePage = () => router.push("/");
 
   useEffect(() => {
     const selectedAnswers = localStorage.getItem("selectedAnswers");
@@ -26,17 +20,15 @@ const EndGame = () => {
       body: JSON.stringify(selectedAnswers),
     })
       .then((res) => res.json())
-      .then((data) => {
-        setScores(data);
-        console.log(data);
-      })
+      .then((data) => setScores(data))
       .catch((err) => console.log(err));
   }, []);
   return (
     <div>
-      <h1>EndGame</h1>
       {!!scores.length && <Score data={scores} />}
-      <button onClick={returnToStart}>Back to start</button>
+      <button className="button primary" onClick={goToHomePage}>
+        Back to start
+      </button>
     </div>
   );
 };

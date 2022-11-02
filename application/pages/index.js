@@ -9,7 +9,9 @@ export default function Home() {
   const [storedUsername, setStoredUsername] = useState(null);
   const [username, setUsername] = useState("");
 
-  console.log({session});
+  if (session) {
+    console.log({ session });
+  }
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);

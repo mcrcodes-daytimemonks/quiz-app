@@ -10,6 +10,8 @@ const Dashboard = () => {
   const { data: session } = useSession();
   const router = useRouter();
 
+  console.log({ session });
+
   const goToGame = () => router.push("/game");
 
   const returnToGameOptions = () => {
@@ -32,7 +34,9 @@ const Dashboard = () => {
       <button type="button" onClick={signOut}>
         Sign Out
       </button>
-      <h1>Dashboard</h1>
+      <p>
+        Hey, <span>{session?.user?.name?.split(" ")[0]}!</span>
+      </p>
       {questions.length ? (
         <div>
           <p>
