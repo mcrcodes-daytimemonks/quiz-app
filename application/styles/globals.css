@@ -13,9 +13,10 @@
 /* COLOUR SCHEME */
 
 :root {
-  --bttn-primary-bg: rgb(255, 0, 67);
+  --color-primary: #ffd400;
+  --color-secondary: rgb(255, 0, 67);
   --bttn-primary-color: #fff;
-  --bttn-secondary-bg: rgb(0, 214, 242);
+  --color-tertiary: rgb(0, 214, 242);
   --bttn-secondary-color: #000;
   --bttn-border-rad: 50px;
   --bttn-padding: 1rem;
@@ -47,7 +48,7 @@ button {
   outline: var(--bttn-outline);
   border: var(--bttn-border);
   padding: 0.5rem;
-  background-color: var(--bttn-secondary-bg);
+  background-color: var(--color-tertiary);
   text-align: center;
 }
 
@@ -70,5 +71,5 @@ input[type="radio"] {
 }
 
 button.primary {
-  background-color: var(--bttn-primary-bg); 
+  background-color: var(--color-secondary); 
 }
