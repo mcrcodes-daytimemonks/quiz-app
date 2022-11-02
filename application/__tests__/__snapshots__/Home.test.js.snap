@@ -15,9 +15,6 @@ exports[`Home matches snapshot 1`] = `
         >
           Sign Out
         </button>
-        <h1>
-          Dashboard
-        </h1>
         <p>
           Hey, 
           <span>

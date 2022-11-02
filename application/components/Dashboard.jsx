@@ -32,7 +32,6 @@ const Dashboard = () => {
       <button type="button" onClick={signOut}>
         Sign Out
       </button>
-      <h1>Dashboard</h1>
       <p>
         Hey, <span>{session?.user?.name?.split(" ")[0]}!</span>
       </p>
