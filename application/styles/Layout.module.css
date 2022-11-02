@@ -1,9 +1,12 @@
 .Layout__header {
-    position: fixed;
-    width: 100vw;
+    height: 3rem;
+    padding: 1rem 1.5rem;
     display: flex;
-    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--color-primary);
+    position: sticky;
+    top: 0;
 }
 
 .Layout__content {

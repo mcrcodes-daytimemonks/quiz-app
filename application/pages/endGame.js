@@ -26,7 +26,9 @@ const EndGame = () => {
   return (
     <div>
       {!!scores.length && <Score data={scores} />}
-      <button onClick={goToHomePage}>Back to start</button>
+      <button className="button primary" onClick={goToHomePage}>
+        Back to start
+      </button>
     </div>
   );
 };

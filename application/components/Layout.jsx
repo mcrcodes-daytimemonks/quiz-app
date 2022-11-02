@@ -1,18 +1,22 @@
+import React from "react";
 import Image from "next/image";
 import css from "../styles/Layout.module.css";
+import SessionWidget from "./SessionWidget";
+import { signOut } from "next-auth/react";
 
 const Layout = ({ children }) => {
   return (
     <>
       <header className={css.Layout__header}>
         <Image
-          src="/manchester-codes-logo.svg"
           alt="manchester codes logo"
           height="24px"
-          width="100%"
+          src="/manchester-codes-logo.svg"
+          width="100vw"
         />
+        <SessionWidget signOut={signOut} />
       </header>
-      <div className={css.Layout__content}>{children}</div>
+      <main className={css.Layout__content}>{children}</main>
     </>
   );
 };

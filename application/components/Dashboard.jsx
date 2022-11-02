@@ -13,7 +13,7 @@ const Dashboard = () => {
   const goToGame = () => router.push("/game");
 
   const returnToGameOptions = () => {
-    deleteStoredGameData();
+    deleteStoredGameData(); 
     router.reload();
   };
 
@@ -22,16 +22,18 @@ const Dashboard = () => {
     if (storedQuestions) {
       setQuestions(JSON.parse(storedQuestions));
     }
+    console.log("local username is", localStorage.getItem("username"));
   }, []);
 
   return (
     <div>
-      Signed in as {session.user.name}
+      {session.user.name ? `Signed in as ${session.user.name}` : "Guest" }
+
       <button type="button" onClick={signOut}>
         Sign Out
       </button>
       <p>
-        Hey, <span>{session.user.name.split(" ")[0]}!</span>
+        Hey, <span>{session?.user?.name?.split(" ")[0]}!</span>
       </p>
       {questions.length ? (
         <div>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import router from "next/router";
 import updateStoredSelectedAnswers from "../utils/updateStoredSelectedAnswers";
+import css from "../styles/GamePlay.module.css";
 
 const GamePlay = () => {
   const [questionLimit, setQuestionLimit] = useState(0);
@@ -64,13 +65,13 @@ const GamePlay = () => {
   };
 
   return (
-    <div>
-      <h1>GamePlay</h1>
+    <div className={css.GamePlay__grid}>
+      <h1>Question {+questionIndex + 1} of {questionLimit}</h1>
 
-      <fieldset>
+      <fieldset className={css.answers}>
         <legend>{currentQuestion?.question}</legend>
         {currentAnswers.map((answer) => (
-          <div key={answer}>
+          <div key={answer} className={css.answer__input}>
             <input
               type="radio"
               id={answer}
@@ -79,18 +80,18 @@ const GamePlay = () => {
               checked={answer === selectedAnswer}
               onChange={handleAnswerSelection}
             />
-            <label htmlFor={answer}>{answer}</label>
+            <label className="radio-bttn-label" htmlFor={answer}>{answer}</label>
           </div>
         ))}
       </fieldset>
       <br />
       {Number(questionIndex) === Number(questionLimit - 1) &&
       Number(selectedAnswersCount) === Number(questionLimit - 1) ? (
-        <button disabled={!selectedAnswer} onClick={handleEndGame}>
+        <button className="button primary" disabled={!selectedAnswer} onClick={handleEndGame}>
           End Game
         </button>
       ) : (
-        <button disabled={!selectedAnswer} onClick={handleAnswerSubmit}>
+        <button className="button primary" disabled={!selectedAnswer} onClick={handleAnswerSubmit}>
           Next Question
         </button>
       )}
