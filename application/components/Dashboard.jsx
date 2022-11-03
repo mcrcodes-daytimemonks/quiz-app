@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import GameOptions from "./GameOptions";
@@ -9,8 +8,6 @@ const Dashboard = () => {
   const [questions, setQuestions] = useState([]);
   const { data: session } = useSession();
   const router = useRouter();
-
-  console.log({ session });
 
   const goToGame = () => router.push("/game");
 
@@ -57,10 +54,6 @@ const Dashboard = () => {
       )}
     </div>
   );
-};
-
-Dashboard.propTypes = {
-  handleLogout: PropTypes.func.isRequired,
 };
 
 export default Dashboard;
