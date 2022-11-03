@@ -1,3 +1,9 @@
+.result {
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
 .correct {
   color: green;
 }
@@ -5,3 +11,4 @@
 .wrong {
   color: red;
 }
+
