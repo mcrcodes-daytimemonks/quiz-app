@@ -19,7 +19,7 @@ const GamePlay = () => {
 
   const handleEndGame = () => {
     handleAnswerSubmit();
-    router.push("/endGame");
+    router.replace("/endGame");
   };
 
   const handleAnswerSubmit = () => {

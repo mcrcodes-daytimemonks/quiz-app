@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { signIn } from "next-auth/react";
 
 const Login = () => {
@@ -14,12 +13,6 @@ const Login = () => {
       </form>
     </div>
   );
-};
-
-Login.propTypes = {
-  username: PropTypes.string.isRequired,
-  handleUsernameChange: PropTypes.func.isRequired,
-  handleLogin: PropTypes.func.isRequired,
 };
 
 export default Login;
