@@ -25,6 +25,10 @@
   --bttn-font-weight: bold;
 }
 
+* {
+  user-select: none;
+}
+
 html,
 body {
   padding: 0;
@@ -45,18 +49,18 @@ button {
 .radio-bttn-label {
   border-radius: var(--bttn-border-rad);
   outline: var(--bttn-outline);
-  border: var(--bttn-border);
-  padding: 0.5rem;
   background-color: var(--bttn-secondary-bg);
+  padding: 0.5rem;
   text-align: center;
+}
+
+input[type="radio"]:checked + label code {
+  font-weight: 1000;
+  /* border: 2px solid rgb(255, 255, 255); */
 }
 
 input[type="radio"]:checked + label {
   font-weight: bold;
-}
-
-input[type="radio"]:not(:checked) + label {
-
 }
 
 input[type="radio"] {
@@ -74,8 +78,8 @@ button.primary {
 }
 
 code {
-  background-color: rgb(0, 35, 82);
-  color: rgb(207, 207, 207);
+  background-color: rgba(0, 35, 82, 0.5);
+  color: rgb(255, 255, 255);
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
