@@ -1,4 +1,5 @@
 import css from "../styles/Score.module.css";
+import StringCodeParser from "../components/StringCodeParser"
 
 const Score = (props) => {
   const { data } = props;
@@ -24,9 +25,9 @@ const Score = (props) => {
           >
           <div>
             <p className={result.isCorrect ? css.correct : css.wrong}>
-              {result.question}
+              <StringCodeParser string={result.question} />
             </p>
-            {!result.isCorrect && <p> Correct Answer: {result.correctAnswer}</p>}
+            {!result.isCorrect && <p> Correct Answer: <StringCodeParser string={result.correctAnswer} /></p>}
           </div>
             <p>{result.isCorrect ? "tick" : "cross"}</p>
           </div>
