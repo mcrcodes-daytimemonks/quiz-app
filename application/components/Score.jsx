@@ -9,7 +9,6 @@ const Score = (props) => {
   return (
     <div>
       <h1>Score Component</h1>
-      {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
       <p>
         You scored {numCorrect} out of {data.length}.  {numCorrect === data.length ? "Congratulations you scored 100%" : "Keep learning"}.
       </p>
@@ -17,11 +16,7 @@ const Score = (props) => {
         {data.map((result) => (
           <div
             key={result.id}
-            style={{
-              padding: "0 2rem",
-              display: "flex",
-              justifyContent: "space-between",
-            }}
+            className={css.result}
           >
           <div>
             <p className={result.isCorrect ? css.correct : css.wrong}>
