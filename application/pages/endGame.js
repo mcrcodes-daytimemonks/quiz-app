@@ -6,7 +6,7 @@ import deleteStoredGameData from "../utils/deleteStoredGameData";
 const EndGame = () => {
   const router = useRouter();
   const [scores, setScores] = useState([]);
-  const goToHomePage = () => router.push("/");
+  const goToHomePage = () => router.replace("/");
 
   useEffect(() => {
     const selectedAnswers = localStorage.getItem("selectedAnswers");
