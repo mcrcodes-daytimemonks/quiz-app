@@ -1,8 +1,3 @@
-<<<<<<< Updated upstream
-# quiz-app
-A quiz app to test and strengthen your coding knowledge. 
-....
-=======
 # Manchester Codes Community App
 
 ## Authors
@@ -57,4 +52,3 @@ Future features for the application include:
     npm run dev
     ```
 - Launch your preferred browser and navigate to [http://localhost:3000](http://localhost:3000)
->>>>>>> Stashed changes
