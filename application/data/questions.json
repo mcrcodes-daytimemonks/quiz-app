@@ -1,13 +1,10 @@
 [{
-  "_id": {
-    "$oid": "635683c2500a7af2c9222a72"
-  },
   "question": "Choose the correct HTML element for the largest heading",
   "answers": [
-    "<h1>",
-    "<heading>",
-    "<head>",
-    "<h6>"
+    "```<h1>```",
+    "```<heading>```",
+    "```<head>```",
+    "```<h6>```"
   ],
   "tags": [
     "HTML"
@@ -15,15 +12,12 @@
   "correct_count": 0,
   "incorrect_count": 0
 },{
-  "_id": {
-    "$oid": "635684e4500a7af2c9222a73"
-  },
   "question": "What is the correct HTML element for inserting a line break?",
   "answers": [
-    "<br>",
-    "<break>",
-    "<lb>",
-    "<bl>"
+    "```<br>```",
+    "```<break>```",
+    "```<lb>```",
+    "```<bl>```"
   ],
   "tags": [
     "HTML"
@@ -31,15 +25,12 @@
   "correct_count": 0,
   "incorrect_count": 0
 },{
-  "_id": {
-    "$oid": "63568593500a7af2c9222a74"
-  },
   "question": "What is the correct HTML for adding a background colour?",
   "answers": [
-    "<body style=\"background-color:yellow;\">",
-    "<body bg=\"yellow\">",
-    "<background>yellow</background>",
-    "<body style bg=\"yellow\">"
+    "```<body style=\"background-color:yellow;\">```",
+    "```<body bg=\"yellow\">```",
+    "```<background>yellow</background>```",
+    "```<body style bg=\"yellow\">```"
   ],
   "tags": [
     "HTML"
@@ -47,15 +38,12 @@
   "correct_count": 0,
   "incorrect_count": 0
 },{
-  "_id": {
-    "$oid": "63568693500a7af2c9222a76"
-  },
   "question": "Choose the correct HTML element to define important text",
   "answers": [
-    "<strong>",
-    "<b>",
-    "<i>",
-    "<em>"
+    "```<strong>```",
+    "```<b>```",
+    "```<i>```",
+    "```<em>```"
   ],
   "tags": [
     "HTML"
@@ -63,15 +51,12 @@
   "correct_count": 0,
   "incorrect_count": 0
 },{
-  "_id": {
-    "$oid": "63568741500a7af2c9222a77"
-  },
   "question": "Choose the correct HTML element to define emphasized text.",
   "answers": [
-    "<em>",
-    "<i>",
-    "<strong>",
-    "<b>"
+    "```<em>```",
+    "```<i>```",
+    "```<strong>```",
+    "```<b>```"
   ],
   "tags": [
     "HTML"
@@ -79,10 +64,7 @@
   "correct_count": 0,
   "incorrect_count": 0
 },{
-  "_id": {
-    "$oid": "63568828500a7af2c9222a78"
-  },
-  "question": "What will the following code return? Boolean(10 > 9)",
+  "question": "What will the following code return? ```Boolean(10 > 9)```",
   "answers": [
     "true",
     "false",
@@ -94,15 +76,12 @@
   "correct_count": 0,
   "incorrect_count": 0
 },{
-  "_id": {
-    "$oid": "63568974500a7af2c9222a79"
-  },
   "question": "Which operator is used to assign a value to a variable?",
   "answers": [
-    "=",
-    "===",
-    "||",
-    "=="
+    "```=```",
+    "```===```",
+    "```||```",
+    "```==```"
   ],
   "tags": [
     "JavaScript"
@@ -110,9 +89,6 @@
   "correct_count": 0,
   "incorrect_count": 0
 },{
-  "_id": {
-    "$oid": "63568a42500a7af2c9222a7a"
-  },
   "question": "JavaScript is just Java for the Web?",
   "answers": [
     "false",
@@ -124,15 +100,12 @@
   "correct_count": 0,
   "incorrect_count": 0
 },{
-  "_id": {
-    "$oid": "63568b33500a7af2c9222a7b"
-  },
   "question": "How do you insert a single line comment in a JavaScript file?",
   "answers": [
-    "/* Software and cathedrals are much the same; first we build them, then we pray. */",
-    "<!-- C programmers never die. They are just cast into void. -->",
-    "// Real programmers can write assembly code in any language.",
-    "# I have not failed. I’ve just found 10,000 ways that won’t work."
+    "```// Real programmers can write assembly code in any language.```",
+    "```/* Software and cathedrals are much the same; first we build them, then we pray. */```",
+    "```<!-- C programmers never die. They are just cast into void. -->```",
+    "```# I have not failed. I’ve just found 10,000 ways that won’t work.```"
   ],
   "tags": [
     "JavaScript"
@@ -140,15 +113,12 @@
   "correct_count": 0,
   "incorrect_count": 0
 },{
-  "_id": {
-    "$oid": "63568e01500a7af2c9222a7c"
-  },
   "question": "What is the correct syntax for a JavaScript array?",
   "answers": [
-    "[ \"red\", \"green\", \"blue\" ]",
-    "( \"one\", \"two\", \"three\" )",
-    "{ \"earth\", \"wind\": \"fire\" }",
-    "[ \"Mo\": \"Curly\": \"Larry\" ]"
+    "```[ \"red\", \"green\", \"blue\" ]```",
+    "```( \"one\", \"two\", \"three\" )```",
+    "```{ \"earth\", \"wind\": \"fire\" }```",
+    "```[ \"Mo\": \"Curly\": \"Larry\" ]```"
   ],
   "tags": [
     "JavaScript"
