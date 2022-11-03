@@ -20,8 +20,7 @@ const Dashboard = () => {
     const storedQuestions = localStorage.getItem("questions");
     if (storedQuestions) {
       setQuestions(JSON.parse(storedQuestions));
-    }
-    console.log("local username is", localStorage.getItem("username"));
+    };
   }, []);
 
   return (
