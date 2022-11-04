@@ -325,4 +325,131 @@
   ],
   "correct_count": 0,
   "incorrect_count": 0
+},
+
+//react questions below
+{
+  "question": "What command do you use to create a React boiler plate?",
+  "answers": [
+    "```npx create-react-app AppName```",
+    "```npm create-react AppName```",
+    "```npx setup-react-app AppName```",
+    "```npm react-boilerplate-setup AppName```"
+  ],
+  "tags": [
+    "React"
+  ],
+  "correct_count": 0,
+  "incorrect_count": 0
+},{
+  "question": "When using React you must only use ```.jsx``` file types.",
+  "answers": [
+    "False",
+    "True"
+  ],
+  "tags": [
+    "React"
+  ],
+  "correct_count": 0,
+  "incorrect_count": 0
+},{
+  "question": "You are able to pass information into components using...",
+  "answers": [
+    "Props",
+    "Objects",
+    "Arrays",
+    "Utils"
+  ],
+  "tags": [
+    "React"
+  ],
+  "correct_count": 0,
+  "incorrect_count": 0
+},{
+  "question": "What command is used to start the local development server?",
+  "answers": [
+    "```npm start```",
+    "```npm run dev```",
+    "```npm build```",
+    "```npm run react```"
+  ],
+  "tags": [
+    "React"
+  ],
+  "correct_count": 0,
+  "incorrect_count": 0
+},{
+  "question": "React components must begin with an uppercase letter",
+  "answers": [
+    "True",
+    "False"
+  ],
+  "tags": [
+    "React"
+  ],
+  "correct_count": 0,
+  "incorrect_count": 0
+},{
+  "question": "Which operator can be used to conditionally render a React component?",
+  "answers": [
+    "```&&```",
+    "```||```",
+    "```::```",
+    "```??```"
+  ],
+  "tags": [
+    "React"
+  ],
+  "correct_count": 0,
+  "incorrect_count": 0
+},{
+  "question": "When rendering a list using the JavaScript map() method, what is required for each element rendered?",
+  "answers": [
+    "key",
+    "data",
+    "id",
+    "index"
+  ],
+  "tags": [
+    "React"
+  ],
+  "correct_count": 0,
+  "incorrect_count": 0
+},{
+  "question": "```useEffect```, ```useState``` and ```useContext``` are examples of what?",
+  "answers": [
+    "React hooks",
+    "React functions",
+    "Array operators",
+    "React components"
+  ],
+  "tags": [
+    "React"
+  ],
+  "correct_count": 0,
+  "incorrect_count": 0
+},{
+  "question": "What props will be available to the following component ```<Book {...props} />``` ?",
+  "answers": [
+    "All of them",
+    "Only static ones",
+    "Only updated ones",
+    "Children"
+  ],
+  "tags": [
+    "React"
+  ],
+  "correct_count": 0,
+  "incorrect_count": 0
+},{
+  "question": "To develop and run React code, Node.js is required.",
+  "answers": [
+    "True",
+    "False"
+  ],
+  "tags": [
+    "React"
+  ],
+  "correct_count": 0,
+  "incorrect_count": 0
 }]
