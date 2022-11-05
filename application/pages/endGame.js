@@ -9,9 +9,8 @@ const EndGame = () => {
   const goToHomePage = () => router.replace("/");
 
   useEffect(() => {
-    const selectedAnswers = localStorage.getItem("selectedAnswers");
-    deleteStoredGameData();
-
+    let selectedAnswers = localStorage.getItem("selectedAnswers");
+    
     fetch("/api/getGameResults", {
       method: "POST",
       headers: {
@@ -20,7 +19,10 @@ const EndGame = () => {
       body: JSON.stringify(selectedAnswers),
     })
       .then((res) => res.json())
-      .then((data) => setScores(data))
+      .then((data) => {
+        deleteStoredGameData();
+        setScores(data);
+      })
       .catch((err) => console.log(err));
   }, []);
   return (

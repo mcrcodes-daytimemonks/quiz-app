@@ -15,7 +15,11 @@
     "next-auth": "^4.15.0",
     "prop-types": "^15.8.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-confetti": "^6.1.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.6.0",
+    "react-use": "^17.4.0",
+    "react-use-window-size": "^1.0.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
