@@ -475,5 +475,118 @@
     ],
     "correct_count": 0,
     "incorrect_count": 0
+  },
+  {
+    "question": "SQL is an acronym, but what does is stand for?",
+    "answers": [
+      "Structured Query Language",
+      "Strict Question Language",
+      "Synchronous Query Language",
+      "Strong Query Language"
+    ],
+    "tags": [
+      "SQL"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "What SQL statement can be used to remove a database or table?",
+    "answers": [
+      "```DROP```",
+      "```DELETE```",
+      "```REMOVE```",
+      "```DESTROY"
+    ],
+    "tags": [
+      "SQL"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "In SQL, what is the correct syntax for the \"not equal to\" operator?",
+    "answers": [
+      "```<>```",
+      "```NOT EQUAL```",
+      "```!=```",
+      "```!==```"
+    ],
+    "tags": [
+      "SQL"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "Which SQL statement is used to retrieve data from a database?",
+    "answers": [
+      "```SELECT```",
+      "```GET```",
+      "```READ```",
+      "```FETCH```"
+    ],
+    "tags": [
+      "SQL"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "Which SQL statement is used to update data in a database?",
+    "answers": [
+      "```UPDATE```",
+      "```PUT```",
+      "```AMEND```",
+      "```MODIFY```"
+    ],
+    "tags": [
+      "SQL"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "Which SQL statement is used to remove data from a database?",
+    "answers": [
+      "```DELETE```",
+      "```REMOVE```",
+      "```ERASE```",
+      "```DESTROY```"
+    ],
+    "tags": [
+      "SQL"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "Which SQL statement is used to add data into a database?",
+    "answers": [
+      "```INSERT INTO```",
+      "```CREATE IN```",
+      "```WRITE INTO```",
+      "```ADD INTO```"
+    ],
+    "tags": [
+      "SQL"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "With SQL how would you select a column named ```Email``` from a table named ```Customers```?",
+    "answers": [
+      "```SELECT Email FROM Customers```",
+      "```SELECT Email IN Customers```",
+      "```FROM Customers SELECT Email```",
+      "```SELECT Customers.Email```"
+    ],
+    "tags": [
+      "SQL"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
   }
 ]
