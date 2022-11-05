@@ -77,6 +77,10 @@ button.primary {
   background-color: var(--bttn-primary-bg); 
 }
 
+button.secondary {
+  background-color: var(--bttn-secondary-bg);
+}
+
 code {
   background-color: rgba(0, 35, 82, 0.5);
   color: rgb(255, 255, 255);
