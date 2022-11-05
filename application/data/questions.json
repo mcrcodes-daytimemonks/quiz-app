@@ -1,122 +1,130 @@
-[{
-  "question": "Choose the correct HTML element for the largest heading",
-  "answers": [
-    "```<h1>```",
-    "```<heading>```",
-    "```<head>```",
-    "```<h6>```"
-  ],
-  "tags": [
-    "HTML"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "What is the correct HTML element for inserting a line break?",
-  "answers": [
-    "```<br>```",
-    "```<break>```",
-    "```<lb>```",
-    "```<bl>```"
-  ],
-  "tags": [
-    "HTML"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "What is the correct HTML for adding a background colour?",
-  "answers": [
-    "```<body style=\"background-color:yellow;\">```",
-    "```<body bg=\"yellow\">```",
-    "```<background>yellow</background>```",
-    "```<body style bg=\"yellow\">```"
-  ],
-  "tags": [
-    "HTML"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "Choose the correct HTML element to define important text",
-  "answers": [
-    "```<strong>```",
-    "```<b>```",
-    "```<i>```",
-    "```<em>```"
-  ],
-  "tags": [
-    "HTML"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "Choose the correct HTML element to define emphasized text.",
-  "answers": [
-    "```<em>```",
-    "```<i>```",
-    "```<strong>```",
-    "```<b>```"
-  ],
-  "tags": [
-    "HTML"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},
-
-// new HTML questions below
-{
-  "question": "Which tag should surround a table",
-  "answers": [
-    "```<table></table>```",
-    "```<t></t>```",
-    "```<tb></tb>```",
-    "```<table.data></table.data>```"
-  ],
-  "tags": [
-    "HTML"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "Which is the correct syntax for a paragraph HTML element?",
-  "answers": [
-    "```<p>I am a paragraph</p>```",
-    "```<p>I am a paragraph<p/>```",
-    "```</para>I am a paragraph</para>```",
-    "```</p>I am a paragraph</p>```"
-  ],
-  "tags": [
-    "HTML"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "What HTML code will most web browsers display as italics?",
-  "answers": [
-    "```<em>Will display in italics</em>```",
-    "```<it>Will display in italics</it>```",
-    "```<italics>Will display in italics</italics>```",
-    "```<em Will display in italics >```"
-  ],
-  "tags": [
-    "HTML"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "Which of the following heading tags displays the smallest size and has the lowest rank?",
-  "answers": [
-    "```<h6></h6>```",
-    "```<hsmallest></hsmallest>```",
-    "```<h7></h7>```",
-    "```<htiny></htiny>```"
-  ],
-  "tags": [
-    "HTML"
-  ],{
-    "question": "What does is the tag ```<li></li>``` used for?",
+[
+  {
+    "question": "Choose the correct HTML element for the largest heading.",
+    "answers": [
+      "```<h1>```",
+      "```<heading>```",
+      "```<head>```",
+      "```<h6>```"
+    ],
+    "tags": [
+      "HTML"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "What is the correct HTML element for inserting a line break?",
+    "answers": [
+      "```<br>```",
+      "```<break>```",
+      "```<lb>```",
+      "```<bl>```"
+    ],
+    "tags": [
+      "HTML"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "What is the correct HTML for adding a background colour?",
+    "answers": [
+      "```<body style=\"background-color:yellow;\">```",
+      "```<body bg=\"yellow\">```",
+      "```<background>yellow</background>```",
+      "```<body style bg=\"yellow\">```"
+    ],
+    "tags": [
+      "HTML"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "Choose the correct HTML element to define important text.",
+    "answers": [
+      "```<strong>```",
+      "```<b>```",
+      "```<i>```",
+      "```<em>```"
+    ],
+    "tags": [
+      "HTML"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "Choose the correct HTML element to define emphasized text.",
+    "answers": [
+      "```<em>```",
+      "```<i>```",
+      "```<strong>```",
+      "```<b>```"
+    ],
+    "tags": [
+      "HTML"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "Which tag should surround a table?",
+    "answers": [
+      "```<table></table>```",
+      "```<t></t>```",
+      "```<tb></tb>```",
+      "```<table.data></table.data>```"
+    ],
+    "tags": [
+      "HTML"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "Which is the correct syntax for a paragraph HTML element?",
+    "answers": [
+      "```<p>I am a paragraph</p>```",
+      "```<p>I am a paragraph<p/>```",
+      "```</para>I am a paragraph</para>```",
+      "```</p>I am a paragraph</p>```"
+    ],
+    "tags": [
+      "HTML"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "What HTML code will most web browsers display as italics?",
+    "answers": [
+      "```<em>Will display in italics</em>```",
+      "```<it>Will display in italics</it>```",
+      "```<italics>Will display in italics</italics>```",
+      "```<em Will display in italics >```"
+    ],
+    "tags": [
+      "HTML"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "Which of the following heading tags displays the smallest size and has the lowest rank?",
+    "answers": [
+      "```<h6></h6>```",
+      "```<hsmallest></hsmallest>```",
+      "```<h7></h7>```",
+      "```<htiny></htiny>```"
+    ],
+    "tags": [
+      "HTML"
+    ]
+  },
+  {
+    "question": "What is the ```<li></li>``` tag used for?",
     "answers": [
       "An item in a list",
       "To display an element in light text",
@@ -128,8 +136,9 @@
     ],
     "correct_count": 0,
     "incorrect_count": 0
-  },{
-    "question": "What does the <br><br> tag do?",
+  },
+  {
+    "question": "What does the <br/> tag do?",
     "answers": [
       "Creates a line break",
       "Creates a new branch",
@@ -142,314 +151,329 @@
     "correct_count": 0,
     "incorrect_count": 0
   },
-
-// new HTML questions above 
-
-{
-  "question": "What will the following code return? ```Boolean(10 > 9)```",
-  "answers": [
-    "true",
-    "false",
-    "NaN"
-  ],
-  "tags": [
-    "JavaScript"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "Which operator is used to assign a value to a variable?",
-  "answers": [
-    "```=```",
-    "```===```",
-    "```||```",
-    "```==```"
-  ],
-  "tags": [
-    "JavaScript"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "JavaScript is just Java for the Web?",
-  "answers": [
-    "false",
-    "true"
-  ],
-  "tags": [
-    "JavaScript"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "How do you insert a single line comment in a JavaScript file?",
-  "answers": [
-    "```// Real programmers can write assembly code in any language.```",
-    "```/* Software and cathedrals are much the same; first we build them, then we pray. */```",
-    "```<!-- C programmers never die. They are just cast into void. -->```",
-    "```# I have not failed. I’ve just found 10,000 ways that won’t work.```"
-  ],
-  "tags": [
-    "JavaScript"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "What is the correct syntax for a JavaScript array?",
-  "answers": [
-    "```[ \"red\", \"green\", \"blue\" ]```",
-    "```( \"one\", \"two\", \"three\" )```",
-    "```{ \"earth\", \"wind\": \"fire\" }```",
-    "```[ \"Mo\": \"Curly\": \"Larry\" ]```"
-  ],
-  "tags": [
-    "JavaScript"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},
-
-// new JavaScript questions below
-{
-  "question": "What does the ```!``` bang operator do?",
-  "answers": [
-    "reverses the truthiness and falsiness of a value",
-    "compares two values",
-    "stops the code from running",
-    "makes a loud noise"
-  ],
-  "tags": [
-    "JavaScript"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "How would you access the second item, \"Panda\", in the following array?  ```const cuteAnimals = [ \"Chipmonk\", \"Sloth\", \"Panda\" ]```",
-  "answers": [
-    "```cuteAnimals[2]```",
-    "```cuteAnimals{3}```",
-    "```cuteAnimals(2)```",
-    "```cuteAnimals.Panda```"
-  ],
-  "tags": [
-    "JavaScript"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "The ```.reduce()``` method iterates over an array, takes the value of the elements and returns a single value",
-  "answers": [
-    "true",
-    "false"
-  ],
-  "tags": [
-    "JavaScript"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "Which is the logical OR operator?",
-  "answers": [
-    "```||```",
-    "```!!```",
-    "```==```",
-    "```!```"
-  ],
-  "tags": [
-    "JavaScript"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "What is the name of the ```%``` operator?",
-  "answers": [
-    "Modulus",
-    "Bang",
-    "Exponentiation",
-    "Decrement"
-  ],
-  "tags": [
-    "JavaScript"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "What is the general purpose of a loop?",
-  "answers": [
-    "Loops iterate over a block of code based on specific conditions",
-    "Loops refactor code",
-    "Loops create code automatically",
-    "Loops create variables"
-  ],
-  "tags": [
-    "JavaScript"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "You want to run a code block at least once, then loop as long as a condition remains true.  What type of loop would you use?",
-  "answers": [
-    "do...while",
-    "for",
-    "while",
-    "a nested for loop"
-  ],
-  "tags": [
-    "JavaScript"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "How should the conditions of a loop be separated?",
-  "answers": [
-    "With a semicolon ```;```",
-    "With a colon ```:```",
-    "With a tilde ```~```",
-    "With a comma ```,```"
-  ],
-  "tags": [
-    "JavaScript"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "Which of the following is a truthy value?",
-  "answers": [
-    "```let someVariable = \"false\"```",
-    "```let someVariable = \"\" )```",
-    "```let someVariable = 0```",
-    "```let someVariable = false```"
-  ],
-  "tags": [
-    "JavaScript"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},
-
-//react questions below
-{
-  "question": "What command do you use to create a React boiler plate?",
-  "answers": [
-    "```npx create-react-app AppName```",
-    "```npm create-react AppName```",
-    "```npx setup-react-app AppName```",
-    "```npm react-boilerplate-setup AppName```"
-  ],
-  "tags": [
-    "React"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "When using React you must only use ```.jsx``` file types.",
-  "answers": [
-    "False",
-    "True"
-  ],
-  "tags": [
-    "React"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "You are able to pass information into components using...",
-  "answers": [
-    "Props",
-    "Objects",
-    "Arrays",
-    "Utils"
-  ],
-  "tags": [
-    "React"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "What command is used to start the local development server?",
-  "answers": [
-    "```npm start```",
-    "```npm run dev```",
-    "```npm build```",
-    "```npm run react```"
-  ],
-  "tags": [
-    "React"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "React components must begin with an uppercase letter",
-  "answers": [
-    "True",
-    "False"
-  ],
-  "tags": [
-    "React"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "Which operator can be used to conditionally render a React component?",
-  "answers": [
-    "```&&```",
-    "```||```",
-    "```::```",
-    "```??```"
-  ],
-  "tags": [
-    "React"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "When rendering a list using the JavaScript map() method, what is required for each element rendered?",
-  "answers": [
-    "key",
-    "data",
-    "id",
-    "index"
-  ],
-  "tags": [
-    "React"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "```useEffect```, ```useState``` and ```useContext``` are examples of what?",
-  "answers": [
-    "React hooks",
-    "React functions",
-    "Array operators",
-    "React components"
-  ],
-  "tags": [
-    "React"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "What props will be available to the following component ```<Book {...props} />``` ?",
-  "answers": [
-    "All of them",
-    "Only static ones",
-    "Only updated ones",
-    "Children"
-  ],
-  "tags": [
-    "React"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-},{
-  "question": "To develop and run React code, Node.js is required.",
-  "answers": [
-    "True",
-    "False"
-  ],
-  "tags": [
-    "React"
-  ],
-  "correct_count": 0,
-  "incorrect_count": 0
-}]
+  {
+    "question": "What will the following code return? ```Boolean(10 > 9)```",
+    "answers": [
+      "true",
+      "false",
+      "NaN"
+    ],
+    "tags": [
+      "JavaScript"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "Which operator is used to assign a value to a variable?",
+    "answers": [
+      "```=```",
+      "```===```",
+      "```||```",
+      "```==```"
+    ],
+    "tags": [
+      "JavaScript"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "JavaScript is just Java for the Web?",
+    "answers": [
+      "false",
+      "true"
+    ],
+    "tags": [
+      "JavaScript"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "How do you insert a single line comment in a JavaScript file?",
+    "answers": [
+      "```// This is a single line comment. ```",
+      "```/* This is a single line comment. */```",
+      "```<!-- This is a single line comment. -->```",
+      "```# This is a single line comment. ```"
+    ],
+    "tags": [
+      "JavaScript"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "What is the correct syntax for a JavaScript array?",
+    "answers": [
+      "```[ \"red\", \"green\", \"blue\" ]```",
+      "```( \"one\", \"two\", \"three\" )```",
+      "```{ \"earth\", \"wind\": \"fire\" }```",
+      "```[ \"Mo\": \"Curly\": \"Larry\" ]```"
+    ],
+    "tags": [
+      "JavaScript"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "What does the ```!``` bang operator do?",
+    "answers": [
+      "Reverses a boolean expression",
+      "Compares two values",
+      "Stops the code from running",
+      "Throws an error"
+    ],
+    "tags": [
+      "JavaScript"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "How would you access the second item, \"Panda\", in the following array?  ```const cuteAnimals = [ \"Chipmunk\", \"Sloth\", \"Panda\" ]```",
+    "answers": [
+      "```cuteAnimals[2]```",
+      "```cuteAnimals{3}```",
+      "```cuteAnimals(2)```",
+      "```cuteAnimals.Panda```"
+    ],
+    "tags": [
+      "JavaScript"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "The ```.reduce()``` method iterates over an array, takes the value of the elements and returns a single value.",
+    "answers": [
+      "true",
+      "false"
+    ],
+    "tags": [
+      "JavaScript"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "Which is the logical OR operator?",
+    "answers": [
+      "```||```",
+      "```!!```",
+      "```==```",
+      "```!```"
+    ],
+    "tags": [
+      "JavaScript"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "In JavaScript What is the name of the ```%``` operator?",
+    "answers": [
+      "Remainder",
+      "Bang",
+      "Exponentiation",
+      "Percentage"
+    ],
+    "tags": [
+      "JavaScript"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "What is the general purpose of a loop?",
+    "answers": [
+      "Loops iterate over a block of code based on specific conditions",
+      "Loops refactor code",
+      "Loops create code automatically",
+      "Loops create variables"
+    ],
+    "tags": [
+      "JavaScript"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "You want to run a code block at least once, then loop as long as some condition remains ```true```.  What type of loop would you use?",
+    "answers": [
+      "do...while",
+      "for",
+      "while",
+      "A nested for loop"
+    ],
+    "tags": [
+      "JavaScript"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "How should the conditions of a loop be separated?",
+    "answers": [
+      "With a semicolon ```;```",
+      "With a colon ```:```",
+      "With a tilde ```~```",
+      "With a comma ```,```"
+    ],
+    "tags": [
+      "JavaScript"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "Which of the following is a truthy value?",
+    "answers": [
+      "```let someVariable = \"false\"```",
+      "```let someVariable = \"\" )```",
+      "```let someVariable = 0```",
+      "```let someVariable = false```"
+    ],
+    "tags": [
+      "JavaScript"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "What command do you use to create a React boiler plate?",
+    "answers": [
+      "```npx create-react-app AppName```",
+      "```npm create-react-app AppName```",
+      "```npx create-app-react AppName```",
+      "```npm create-app-react AppName```"
+    ],
+    "tags": [
+      "React"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "When using React you must only use the ```.jsx``` file extension for component files.",
+    "answers": [
+      "False",
+      "True"
+    ],
+    "tags": [
+      "React"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "You are able to pass information into components using...",
+    "answers": [
+      "Props",
+      "Objects",
+      "Arrays",
+      "Utils"
+    ],
+    "tags": [
+      "React"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "In React, what command is used to start the local development server?",
+    "answers": [
+      "```npm start```",
+      "```npm run dev```",
+      "```npm build```",
+      "```npm run react```"
+    ],
+    "tags": [
+      "React"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "React components must begin with an uppercase letter",
+    "answers": [
+      "True",
+      "False"
+    ],
+    "tags": [
+      "React"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "Which operator can be used to conditionally render a React component?",
+    "answers": [
+      "```&&```",
+      "```||```",
+      "```::```",
+      "```??```"
+    ],
+    "tags": [
+      "React"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "In React, when using ```.map()```, to transform array data to JSX markup, what ```prop``` is required for each element rendered?",
+    "answers": [
+      "key",
+      "data",
+      "id",
+      "index"
+    ],
+    "tags": [
+      "React"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "```useEffect```, ```useState``` and ```useContext``` are examples of what?",
+    "answers": [
+      "React hooks",
+      "React functions",
+      "Array operators",
+      "React components"
+    ],
+    "tags": [
+      "React"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "What props will be available to the following component ```<Book {...props} />``` ?",
+    "answers": [
+      "All of them",
+      "Only static ones",
+      "Only updated ones",
+      "Children"
+    ],
+    "tags": [
+      "React"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "To develop and run React code, Node.js is required.",
+    "answers": [
+      "True",
+      "False"
+    ],
+    "tags": [
+      "React"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  }
+]
