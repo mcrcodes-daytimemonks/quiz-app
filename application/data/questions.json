@@ -588,5 +588,168 @@
     "correct_count": 0,
     "incorrect_count": 0
   },
+  {
+    "question": "CSS in an acronym, but what does it stand for?",
+    "answers": [
+      "```Cascading Style Sheets```",
+      "```Computed Style Source```",
+      "```Concurrent Style Sheets```",
+      "```Collated Style Source```"
+    ],
+    "tags": [
+      "CSS"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "What is the correct HTML for referring to an external style sheet?",
+    "answers": [
+      "```<link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\">```",
+      "```<link rel=\"stylesheet\" type=\"text/css\" src=\"styles.css\">```",
+      "```<style src=\"styles.css\">```",
+      "```<style href=\"styles.css\">```"
+    ],
+    "tags": [
+      "CSS",
+      "HTML"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "Which is the correct CSS syntax to apply a background color to the body element?",
+    "answers": [
+      "```body { background-color: #000; }```",
+      "```{ body: background-color: #000; }```",
+      "```.body { background-color: #000; }```",
+      "```body: { background-color: #000 };```"
+    ],
+    "tags": [
+      "CSS"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "How do you insert comments in a CSS file?",
+    "answers": [
+      "```/* This is a CSS comment */```",
+      "```// This is a CSS comment ```",
+      "```<!-- This is a CSS comment -->```",
+      "```# This is a CSS comment```"
+    ],
+    "tags": [
+      "CSS"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "Which CSS property is used to set the color of text?",
+    "answers": [
+      "```color```",
+      "```font-color```",
+      "```text-color",
+      "```text-decoration"
+    ],
+    "tags": [
+      "CSS"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "Which of these hex colours displays the colour red?",
+    "answers": [
+      "```#F00```",
+      "```#0F0```",
+      "```#00F",
+      "```#FF0"
+    ],
+    "tags": [
+      "CSS"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "Which of these hex colours displays the colour blue?",
+    "answers": [
+      "```#00F",
+      "```#F00```",
+      "```#0F0```",
+      "```#FF0"
+    ],
+    "tags": [
+      "CSS"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "Which of these hex colours displays the colour green?",
+    "answers": [
+      "```#0F0```",
+      "```#00F",
+      "```#F00```",
+      "```#FF0"
+    ],
+    "tags": [
+      "CSS"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "Which of these hex colours displays the colour yellow?",
+    "answers": [
+      "```#FF0",
+      "```#0FF```",
+      "```#F0F"
+    ],
+    "tags": [
+      "CSS"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "Which of these hex colours displays the colour cyan?",
+    "answers": [
+      "```#0FF```",
+      "```#F0F",
+      "```#FF0"
+    ],
+    "tags": [
+      "CSS"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "Which of these hex colours displays the colour magenta?",
+    "answers": [
+      "```#F0F",
+      "```#0FF```",
+      "```#FF0"
+    ],
+    "tags": [
+      "CSS"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
+  },
+  {
+    "question": "CSS hex colours support transparency?",
+    "answers": [
+      "True",
+      "False"
+    ],
+    "tags": [
+      "CSS"
+    ],
+    "correct_count": 0,
+    "incorrect_count": 0
   }
 ]
