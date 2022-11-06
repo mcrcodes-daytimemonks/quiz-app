@@ -3,9 +3,14 @@ import mapToIsCodeObjs from "../utils/mapStringToCodeRegions";
 const StringCodeParser = ({ string }) => {
   return (
     <p>
-      {mapToIsCodeObjs(string, "```").map((region) =>
-        region.isCode ? <code>{region.string}</code> : <span>{region.string}</span>
-      )}
+      {mapToIsCodeObjs(string, "```").map((region, i) => {
+        const key = `${region.string}-${i}`;
+        return region.isCode ? (
+          <code key={key}>{region.string}</code>
+        ) : (
+          <span key={key}>{region.string}</span>
+        );
+      })}
     </p>
   );
 };
