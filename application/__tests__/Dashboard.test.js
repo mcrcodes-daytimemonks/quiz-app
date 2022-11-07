@@ -30,11 +30,4 @@ describe("Dashboard", () => {
 
     expect(asFragment()).toMatchSnapshot();
   });
-
-  it("renders a call to action", () => {
-    renderDashboard();
-    const callToAction = /please choose a category/i;
-
-    expect(screen.getByText(callToAction)).toBeInTheDocument();
-  });
 });

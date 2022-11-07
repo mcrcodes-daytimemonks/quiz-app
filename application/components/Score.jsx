@@ -1,5 +1,8 @@
 import css from "../styles/Score.module.css";
-import StringCodeParser from "../components/StringCodeParser"
+import StringCodeParser from "../components/StringCodeParser";
+import { BsCheckLg, BsXLg } from "react-icons/bs";
+import { useWindowSize } from "react-use";
+import Confetti from "react-confetti";
 
 const Score = (props) => {
   const { data } = props;
@@ -7,33 +10,47 @@ const Score = (props) => {
   const numCorrect = data.filter((item) => item.isCorrect).length;
 
   return (
-    <div>
-      <h1>Score Component</h1>
-      {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
-      <p>
-        You scored {numCorrect} out of {data.length}.  {numCorrect === data.length ? "Congratulations you scored 100%" : "Keep learning"}.
-      </p>
-      <div>
-        {data.map((result) => (
-          <div
-            key={result.id}
-            style={{
-              padding: "0 2rem",
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
-          <div>
-            <p className={result.isCorrect ? css.correct : css.wrong}>
-              <StringCodeParser string={result.question} />
-            </p>
-            {!result.isCorrect && <p> Correct Answer: <StringCodeParser string={result.correctAnswer} /></p>}
-          </div>
-            <p>{result.isCorrect ? "tick" : "cross"}</p>
-          </div>
-        ))}
+    <>
+      <div className={css.Score}>
+        <div className={css.Score__card}>
+        <header>
+          <p>
+            You scored {numCorrect} out of {data.length}{" "}
+          </p>
+          <p>
+            {numCorrect === data.length
+              ? "Congratulations you scored 100%"
+              : "Keep trying, you got this!"}
+          </p>
+        </header>
+
+          {data.map((result) => (
+            <div key={result.id} className={css.Score__result}>
+              <p
+                className={`
+                    ${css.Score__verification}
+                    ${
+                      result.isCorrect
+                        ? css.Score__correct
+                        : css.Score__incorrect
+                    }`}
+              >
+                <StringCodeParser string={result.question} />
+                {result.isCorrect ? <BsCheckLg /> : <BsXLg />}
+              </p>
+
+              {!result.isCorrect && (
+                <div className={css.Score__answer}>
+                  Correct Answer
+                  <StringCodeParser string={result.correctAnswer} />
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+      {numCorrect === data.length && <Confetti recycle={false} />}
+    </>
   );
 };
 
