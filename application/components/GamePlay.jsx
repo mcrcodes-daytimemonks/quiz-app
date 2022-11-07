@@ -66,19 +66,19 @@ const GamePlay = () => {
   };
 
   return (
-    <div className={css.GamePlay__grid}>
+    <div className={css.GamePlay}>
       <h1>
         Question {+questionIndex + 1} of {questionLimit}
       </h1>
 
-      <fieldset className={css.answers}>
-        <legend>
+      <fieldset className={css.GamePlay__questionCard}>
+        <legend className={css.GamePlay__question}>
           {currentQuestion.question && (
-              <StringCodeParser string={currentQuestion.question} />
-            )}
+            <StringCodeParser string={currentQuestion.question} />
+          )}
         </legend>
         {currentAnswers.map((answer) => (
-          <div key={answer} className={css.answer__input}>
+          <div key={answer} className={css.GamePlay__questionOption}>
             <input
               type="radio"
               id={answer}
@@ -97,7 +97,7 @@ const GamePlay = () => {
       {Number(questionIndex) === Number(questionLimit - 1) &&
       Number(selectedAnswersCount) === Number(questionLimit - 1) ? (
         <button
-          className="button primary"
+          className={`${css.GamePlay__button} button primary`}
           disabled={!selectedAnswer}
           onClick={handleEndGame}
         >
@@ -105,7 +105,7 @@ const GamePlay = () => {
         </button>
       ) : (
         <button
-          className="button primary"
+          className={`${css.GamePlay__button} button primary`}
           disabled={!selectedAnswer}
           onClick={handleAnswerSubmit}
         >
