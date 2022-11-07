@@ -1,10 +1,10 @@
 # Manchester Codes Community App
 
 ## Authors
-### Daytime Monks: 
+### Team name : Daytime Monks 
 [Andy Jackson](https://github.com/andyja)  
 [Tom Mills](https://github.com/tdot124)  
-[Michael Shields](https://github.com/mike-shields-dev)
+[Mike Shields](https://github.com/mike-shields-dev)
 
 ## Introduction
 
