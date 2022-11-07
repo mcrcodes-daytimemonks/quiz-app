@@ -33,8 +33,8 @@ Future features for the application include:
     - Personalised user dashboard displaying analytics of personal statistics/performance
     - Attribution of contributions to the platform i.e. user submitted questions.
 
+* Add improve the development & testing workflow by adding local database instance setup to protect the integrity of the production database. 
 ## Development Setup
-
 ### NextJS
 
 *"[NextJS](https://nextjs.org/learn/foundations/about-nextjs/what-is-nextjs) is a flexible [React](https://reactjs.org/) framework that gives you building blocks to create fast web applications."* <sub><sup><i> - Vercel </i></sup></sub>
@@ -95,7 +95,3 @@ There may arise a situation where you want to make amendments to the schema of t
     ```
 
 After carrying out the above steps, your prisma client should now be able to carry out valid database transactions. 
-
-*Due to the tight deadline for submission of the MVP. The project currently only utilizes a single cloud hosted MongoDB database (for both production and development). The database has one collection containing our questions data set.*
-
-*We realise this is not a long term solution. Should the project be developed further, the plan is to expand the development workflow to include a second (local) database instance as part of the development and testing workflow, thus protecting the integrity of the production database.*
