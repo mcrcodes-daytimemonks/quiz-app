@@ -49,7 +49,13 @@ Future features for the application include:
     ```bash
     git clone git@github.com:mcrcodes-daytimemonks/quiz-app.git
     ```
-- Open the cloned repository in the IDE of your choice (we recommend [VSCode](https://code.visualstudio.com/)) and install the dependencies defined in `package.json` & `package-lock.json`
+- Open the cloned repository in the IDE of your choice (we recommend [VSCode](https://code.visualstudio.com/)).
+  
+- Open VSCode's integrated terminal (or your preferred terminal) and change the current working directory to `quiz-app/application`
+  ```bash
+    cd application
+  ```
+- install the dependencies defined in `package.json` & `package-lock.json`
   
     ```bash
     npm install
