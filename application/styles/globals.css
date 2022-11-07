@@ -13,6 +13,7 @@
 /* COLOUR SCHEME */
 
 :root {
+  --dark-blue: #00235280;
   --bttn-primary-bg: rgb(255, 0, 67);
   --bttn-primary-color: #fff;
   --bttn-secondary-bg: rgb(0, 214, 242);
@@ -54,13 +55,9 @@ button {
   text-align: center;
 }
 
-input[type="radio"]:checked + label code {
-  font-weight: 1000;
-  /* border: 2px solid rgb(255, 255, 255); */
-}
-
 input[type="radio"]:checked + label {
   font-weight: bold;
+  box-shadow: 0 0 0 4px #00235280 inset;
 }
 
 input[type="radio"] {
@@ -87,8 +84,8 @@ p {
 
 code {
   white-space: nowrap;
-  background-color: rgba(0, 35, 82, 0.5);
+  background-color: #00235280;
   color: rgb(255, 255, 255);
-  padding: 0.25rem;
+  padding: 0.25rem 0.5rem;
   border-radius: 0.5rem;
 }
