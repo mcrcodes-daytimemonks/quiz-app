@@ -16,3 +16,8 @@
   display: grid;
   padding: 0.5rem 0;
 }
+
+.GameOptions__playButton {
+  max-width: max-content;
+  margin: 0.5rem auto;
+}

@@ -10,8 +10,8 @@ const EndGame = () => {
 
   useEffect(() => {
     let selectedAnswers = localStorage.getItem("selectedAnswers");
-    
-    if(selectedAnswers) {
+
+    if (selectedAnswers) {
       fetch("/api/getGameResults", {
         method: "POST",
         headers: {
@@ -27,14 +27,7 @@ const EndGame = () => {
         .catch((err) => console.log(err));
     }
   }, []);
-  return (
-    <div>
-      {!!scores.length && <Score data={scores} />}
-      <button className="button primary" onClick={goToHomePage}>
-        Back to start
-      </button>
-    </div>
-  );
+  return <>{!!scores.length && <Score data={scores} />}</>;
 };
 
 export default EndGame;

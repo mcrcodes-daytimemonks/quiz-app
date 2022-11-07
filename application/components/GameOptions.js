@@ -6,8 +6,8 @@ import axios from "axios";
 const INIT = {
   QUESTION_LIMIT: {
     MIN: "1",
-    MAX: "5",
-    DEFAULT: "3",
+    MAX: "8",
+    DEFAULT: "5",
   },
 };
 
@@ -84,7 +84,10 @@ const GameOptions = () => {
               value={selectedQuestionLimit}
             />
           </div>
-          <button className="button primary" type="submit">
+          <button
+            className={`${css.GameOptions__playButton} button primary`}
+            type="submit"
+          >
             Play Game
           </button>
         </form>

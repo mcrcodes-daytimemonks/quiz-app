@@ -8,7 +8,6 @@
 .GamePlay__questionCard {
   display: grid;
   gap: 0.5rem;
-  max-width: 50vw;
   border-radius: 0.5rem;
   border: none;
   background: rgba(0,0,0,0.075);
@@ -17,7 +16,6 @@
 }
 
 .GamePlay__question {
-  /* border: 1px solid red; */
   transform: translateY(2rem);
 }
 
@@ -27,6 +25,5 @@
 }
 
 .GamePlay__button {
-  max-width: max-content;
   margin: 0 auto;
 }
