@@ -10,8 +10,8 @@ datasource db {
 model questions {
   id              String   @id @default(auto()) @map("_id") @db.ObjectId
   answers         String[]
-  correct_count   Int
-  incorrect_count Int
+  correct_count   Int?
+  incorrect_count Int?
   question        String
   tags            String[]
 }
