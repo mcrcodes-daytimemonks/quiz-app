@@ -27,6 +27,7 @@ Future features for the application include:
     - Matching/Pairing of related items.
   
 * A more complete/robust user registration/Auth system, which would open the door to further features such as:
+    - Proper conformance with REST API best practices 
     - Database storage of user data/statistics
     - Leaderboard/s to add a competitive element to the platform
     - Peer to peer challenges and interactions
