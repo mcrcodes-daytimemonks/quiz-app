@@ -71,7 +71,7 @@ Future features for the application include:
 
 [Prisma](https://www.prisma.io/) is an open source next-generation [ORM](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping). You can read more about how Prisma was configured for this project [here](https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/mongodb-typescript-mongodb).
 
-The Prisma configuration/setup has already been carried out, all you should need to get going, is a `.env` file in the root of the `application` of this project that contains a `DATABASE_URL` environment variable with an appropriate [MongoDB connection string](https://www.mongodb.com/docs/manual/reference/connection-string/). 
+The Prisma configuration/setup has already been carried out, all you should need to get going, is a `.env` file in the root of the `application` directory of this project that contains a `DATABASE_URL` environment variable with an appropriate [MongoDB connection string](https://www.mongodb.com/docs/manual/reference/connection-string/). 
 
 This environment variable can either point to the URL of your own database instance, or you can contact a [core team member](#authors) of this project to discuss acquiring the URL of the cloud hosted MongoDB database.
 
