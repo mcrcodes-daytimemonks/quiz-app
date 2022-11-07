@@ -11,19 +11,21 @@ const EndGame = () => {
   useEffect(() => {
     let selectedAnswers = localStorage.getItem("selectedAnswers");
     
-    fetch("/api/getGameResults", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(selectedAnswers),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        deleteStoredGameData();
-        setScores(data);
+    if(selectedAnswers) {
+      fetch("/api/getGameResults", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(selectedAnswers),
       })
-      .catch((err) => console.log(err));
+        .then((res) => res.json())
+        .then((data) => {
+          deleteStoredGameData();
+          setScores(data);
+        })
+        .catch((err) => console.log(err));
+    }
   }, []);
   return (
     <div>

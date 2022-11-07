@@ -39,12 +39,12 @@ const Dashboard = () => {
             You are currently half way through a previous game. What would you
             like to do?
           </p>
-          <button type="button" onClick={goToGame}>
+          <button type="button" className="button secondary" onClick={goToGame}>
             Continue
           </button>
           <br />
           <br />
-          <button type="button" onClick={returnToGameOptions}>
+          <button type="button" className="button primary" onClick={returnToGameOptions}>
             New Game
           </button>
         </div>

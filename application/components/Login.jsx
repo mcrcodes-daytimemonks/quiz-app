@@ -9,7 +9,7 @@ const Login = () => {
       <br />
       Please sign in so that we can get to know you better!</p>
       <form onSubmit={signIn}>
-        <button type="submit">Sign In</button>
+        <button type="submit" className="button primary">Sign In</button>
       </form>
     </div>
   );

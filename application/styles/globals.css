@@ -77,9 +77,18 @@ button.primary {
   background-color: var(--bttn-primary-bg); 
 }
 
+button.secondary {
+  background-color: var(--bttn-secondary-bg);
+}
+
+p {
+  line-height: 1.5rem;
+}
+
 code {
+  white-space: nowrap;
   background-color: rgba(0, 35, 82, 0.5);
   color: rgb(255, 255, 255);
-  padding: 0.5rem;
+  padding: 0.25rem;
   border-radius: 0.5rem;
 }
