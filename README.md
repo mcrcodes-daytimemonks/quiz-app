@@ -33,7 +33,7 @@ Future features for the application include:
     - Personalised user dashboard displaying analytics of personal statistics/performance
     - Attribution of contributions to the platform i.e. user submitted questions.
 
-* Add improve the development & testing workflow by adding local database instance setup to protect the integrity of the production database. 
+* Improve the development & testing workflow by adding a requirement for local database instance setup to protect the integrity of the production database. 
 ## Development Setup
 ### NextJS
 
