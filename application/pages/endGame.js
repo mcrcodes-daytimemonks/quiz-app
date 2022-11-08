@@ -6,29 +6,28 @@ import deleteStoredGameData from "../utils/deleteStoredGameData";
 const EndGame = () => {
   const router = useRouter();
   const [scores, setScores] = useState([]);
-  const goToHomePage = () => router.push("/");
+  const goToHomePage = () => router.replace("/");
 
   useEffect(() => {
-    const selectedAnswers = localStorage.getItem("selectedAnswers");
-    deleteStoredGameData();
+    let selectedAnswers = localStorage.getItem("selectedAnswers");
 
-    fetch("/api/getGameResults", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(selectedAnswers),
-    })
-      .then((res) => res.json())
-      .then((data) => setScores(data))
-      .catch((err) => console.log(err));
+    if (selectedAnswers) {
+      fetch("/api/getGameResults", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(selectedAnswers),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          deleteStoredGameData();
+          setScores(data);
+        })
+        .catch((err) => console.log(err));
+    }
   }, []);
-  return (
-    <div>
-      {!!scores.length && <Score data={scores} />}
-      <button onClick={goToHomePage}>Back to start</button>
-    </div>
-  );
+  return <>{!!scores.length && <Score data={scores} />}</>;
 };
 
 export default EndGame;

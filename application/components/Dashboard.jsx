@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import GameOptions from "./GameOptions";
@@ -13,7 +12,7 @@ const Dashboard = () => {
   const goToGame = () => router.push("/game");
 
   const returnToGameOptions = () => {
-    deleteStoredGameData();
+    deleteStoredGameData(); 
     router.reload();
   };
 
@@ -21,17 +20,18 @@ const Dashboard = () => {
     const storedQuestions = localStorage.getItem("questions");
     if (storedQuestions) {
       setQuestions(JSON.parse(storedQuestions));
-    }
+    };
   }, []);
 
   return (
     <div>
-      Signed in as {session.user.name}
+      {session.user.name ? `Signed in as ${session.user.name}` : "Guest" }
+
       <button type="button" onClick={signOut}>
         Sign Out
       </button>
       <p>
-        Hey, <span>{session.user.name.split(" ")[0]}!</span>
+        Hey, <span>{session?.user?.name?.split(" ")[0]}!</span>
       </p>
       {questions.length ? (
         <div>
@@ -39,12 +39,12 @@ const Dashboard = () => {
             You are currently half way through a previous game. What would you
             like to do?
           </p>
-          <button type="button" onClick={goToGame}>
+          <button type="button" className="button secondary" onClick={goToGame}>
             Continue
           </button>
           <br />
           <br />
-          <button type="button" onClick={returnToGameOptions}>
+          <button type="button" className="button primary" onClick={returnToGameOptions}>
             New Game
           </button>
         </div>
@@ -53,10 +53,6 @@ const Dashboard = () => {
       )}
     </div>
   );
-};
-
-Dashboard.propTypes = {
-  handleLogout: PropTypes.func.isRequired,
 };
 
 export default Dashboard;

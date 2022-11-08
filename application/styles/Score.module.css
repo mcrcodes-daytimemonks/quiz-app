@@ -1,0 +1,57 @@
+.Score {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.Score__card {
+  display: grid;
+  background: rgba(0, 0, 0, 0.075);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  gap: 1rem;
+}
+
+.Score__cardTitle {
+  color: var(--dark-blue);
+}
+
+.Score__result {
+  display: grid;
+  grid-template-areas:
+  "verification"
+  "answer";
+  grid-template-columns: 1fr;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  align-items: center;
+}
+
+.Score__verification {
+  grid-area: verification;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem 0 1rem;
+  gap: 1rem;
+  margin: 0;
+}
+
+.Score__answer {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.Score__correct {
+  color: green;
+}
+
+.Score__incorrect {
+  color: red;
+}
+
+.Score__backButton {
+  max-width: max-content;
+  margin: 0.5rem auto;
+}

@@ -5,24 +5,27 @@ import { useSession } from "next-auth/react";
 
 const Game = () => {
   const { data: session } = useSession();
-  const [questions, setQuestions] = useState([]);
-  const [category, setCategory] = useState("");
-  const [questionLimit, setQuestionLimit] = useState(1);
-
-  console.log({ questions });
+  const [category, setCategory] = useState(null);
+  const [questionLimit, setQuestionLimit] = useState(null);
+  const [questions, setQuestions] = useState(null);
 
   useEffect(() => {
-    setQuestions(
-      localStorage.getItem("questions")
-        ? JSON.parse(localStorage.getItem("questions"))
-        : []
-    );
-    setCategory(localStorage.getItem("category") || "");
+    setCategory(localStorage.getItem("category"));
     setQuestionLimit(localStorage.getItem("questionLimit"));
+
+    let storedQuestions;
+    try {
+      storedQuestions = JSON.parse(localStorage.getItem("questions"));
+    } catch (err) {
+      console.error(err);
+    }
+    if (Array.isArray(storedQuestions) && storedQuestions.length) {
+      setQuestions(storedQuestions);
+    }
   }, []);
 
   useEffect(() => {
-    if (category && !questions.length && questionLimit) {
+    if (category && questionLimit && !questions) {
       fetch(`/api/questions?category=${category}&limit=${questionLimit}`)
         .then((res) => res.json())
         .then((questions) => {
@@ -35,7 +38,7 @@ const Game = () => {
 
   return (
     <>
-      {session && !!questions.length && <GamePlay />}
+      {session && questions && <GamePlay />}
       {!session && <LoginPopup />}
     </>
   );

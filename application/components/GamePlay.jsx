@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import router from "next/router";
 import updateStoredSelectedAnswers from "../utils/updateStoredSelectedAnswers";
+import css from "../styles/GamePlay.module.css";
+import StringCodeParser from "./StringCodeParser";
 
 const GamePlay = () => {
   const [questionLimit, setQuestionLimit] = useState(0);
@@ -17,7 +19,7 @@ const GamePlay = () => {
 
   const handleEndGame = () => {
     handleAnswerSubmit();
-    router.push("/endGame");
+    router.replace("/endGame");
   };
 
   const handleAnswerSubmit = () => {
@@ -64,13 +66,19 @@ const GamePlay = () => {
   };
 
   return (
-    <div>
-      <h1>GamePlay</h1>
+    <div className={css.GamePlay}>
+      <h1>
+        Question {+questionIndex + 1} of {questionLimit}
+      </h1>
 
-      <fieldset>
-        <legend>{currentQuestion?.question}</legend>
+      <fieldset className={css.GamePlay__questionCard}>
+        <legend className={css.GamePlay__question}>
+          {currentQuestion.question && (
+            <StringCodeParser string={currentQuestion.question} />
+          )}
+        </legend>
         {currentAnswers.map((answer) => (
-          <div key={answer}>
+          <div key={answer} className={css.GamePlay__questionOption}>
             <input
               type="radio"
               id={answer}
@@ -79,18 +87,28 @@ const GamePlay = () => {
               checked={answer === selectedAnswer}
               onChange={handleAnswerSelection}
             />
-            <label htmlFor={answer}>{answer}</label>
+            <label className="radio-bttn-label" htmlFor={answer}>
+              <StringCodeParser string={answer} />
+            </label>
           </div>
         ))}
       </fieldset>
       <br />
       {Number(questionIndex) === Number(questionLimit - 1) &&
       Number(selectedAnswersCount) === Number(questionLimit - 1) ? (
-        <button disabled={!selectedAnswer} onClick={handleEndGame}>
+        <button
+          className={`${css.GamePlay__button} button primary`}
+          disabled={!selectedAnswer}
+          onClick={handleEndGame}
+        >
           End Game
         </button>
       ) : (
-        <button disabled={!selectedAnswer} onClick={handleAnswerSubmit}>
+        <button
+          className={`${css.GamePlay__button} button primary`}
+          disabled={!selectedAnswer}
+          onClick={handleAnswerSubmit}
+        >
           Next Question
         </button>
       )}
