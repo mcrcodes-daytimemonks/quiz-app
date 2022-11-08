@@ -46,7 +46,7 @@ const GameOptions = () => {
     <>
       {categories && (
         <form
-          className={css.GameOptions__grid}
+          className={css.GameOptions}
           name="game-options"
           onSubmit={goToGame}
         >

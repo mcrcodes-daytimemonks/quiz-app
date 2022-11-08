@@ -15,10 +15,10 @@
 :root {
   --color-primary: #ffd400;
   --color-secondary: rgb(255, 0, 67);
+  --color-tertiary: rgb(0, 214, 242);
   --dark-blue: #00235280;
   --bttn-primary-bg: rgb(255, 0, 67);
   --bttn-primary-color: #fff;
-  --color-tertiary: rgb(0, 214, 242);
   --bttn-secondary-color: #000;
   --bttn-border-rad: 50px;
   --bttn-padding: 1rem;
@@ -55,7 +55,6 @@ button {
   border: var(--bttn-border);
   padding: 0.5rem;
   background-color: var(--color-tertiary);
-  background-color: var(--bttn-secondary-bg);
   padding: 0.5rem;
   text-align: center;
 }
@@ -80,7 +79,7 @@ button.primary {
 }
 
 button.secondary {
-  background-color: var(--bttn-secondary-bg);
+  background-color: var(--color-secondary);
 }
 
 p {
