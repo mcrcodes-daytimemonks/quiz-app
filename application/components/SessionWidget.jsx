@@ -8,9 +8,6 @@ const SessionWidget = () => {
       {session && (
         <>
           <p>Hey, {session.user.name}</p>
-          <button className={css.SessionWidget__button} onClick={signOut}>
-            Sign Out
-          </button>
         </>
       )}
     </div>
