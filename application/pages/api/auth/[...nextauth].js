@@ -3,6 +3,7 @@ import { signIn, useSession } from "next-auth/react";
 import GithubProvider from "next-auth/providers/github";
 import CredentialsProvider from "next-auth/providers/credentials";
 
+
 const authOptions = {
   providers: [
     GithubProvider({
