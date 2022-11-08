@@ -6,7 +6,7 @@ import axios from "axios";
 const INIT = {
   QUESTION_LIMIT: {
     MIN: "1",
-    MAX: "8",
+    MAX: "5",
     DEFAULT: "5",
   },
 };
