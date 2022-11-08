@@ -32,6 +32,10 @@
   user-select: none;
 }
 
+p {
+  margin: 0;
+}
+
 html,
 body {
   padding: 0;
@@ -53,9 +57,8 @@ button {
   border-radius: var(--bttn-border-rad);
   outline: var(--bttn-outline);
   border: var(--bttn-border);
-  padding: 0.5rem;
+  padding: 1rem;
   background-color: var(--color-tertiary);
-  padding: 0.5rem;
   text-align: center;
 }
 
