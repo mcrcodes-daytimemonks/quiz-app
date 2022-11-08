@@ -1,8 +1,15 @@
 .Layout__header {
-    padding: 1rem;
+    height: 3rem;
+    padding: 1rem 1.5rem;
     display: flex;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--color-primary);
     position: sticky;
     top: 0;
+}
+
+.Layout__content {
+    position: fixed;
+    inset: 0 0 0 0;
 }

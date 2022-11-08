@@ -1,0 +1,8 @@
+.SessionWidget {
+  display: flex;
+  gap: 1rem;  
+}
+
+.SessionWidget__button {
+    background: var(--color-secondary);
+}
