@@ -1,18 +1,19 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import css from "../styles/GameOptions.module.css";
+import axios from "axios";
 
 const INIT = {
   QUESTION_LIMIT: {
     MIN: "1",
-    MAX: "5",
-    DEFAULT: "3",
+    MAX: "8",
+    DEFAULT: "5",
   },
-  CATEGORIES: ["JavaScript", "HTML"],
 };
 
 const GameOptions = () => {
   const router = useRouter();
+  const [categories, setCategories] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedQuestionLimit, setSelectedQuestionLimit] = useState(
     INIT.QUESTION_LIMIT.DEFAULT
@@ -35,49 +36,63 @@ const GameOptions = () => {
 
   useEffect(() => {
     localStorage.setItem("questionLimit", INIT.QUESTION_LIMIT.DEFAULT);
+    axios
+      .get("/api/getCategories")
+      .then(({ data }) => setCategories(data))
+      .catch((err) => console.error(err));
   }, []);
 
   return (
-    <form
-      className={css.GameOptions__grid}
-      name="game-options"
-      onSubmit={goToGame}
-    >
-      <fieldset className={css.categories}>
-        <legend>Please choose a category</legend>
+    <>
+      {categories && (
+        <form
+          className={css.GameOptions__grid}
+          name="game-options"
+          onSubmit={goToGame}
+        >
+          <fieldset className={css.categories}>
+            <legend>Please choose a category</legend>
 
-        {INIT.CATEGORIES.map((category) => (
-          <div className={css.category__input}key={category}>
+            {categories.map((category) => (
+              <div className={css.category__input} key={category}>
+                <input
+                  checked={category === selectedCategory}
+                  id={category}
+                  name="category"
+                  onChange={updateCategory}
+                  required
+                  type="radio"
+                  value={category}
+                />
+                <label className="radio-bttn-label" htmlFor={category}>
+                  {category}
+                </label>
+              </div>
+            ))}
+          </fieldset>
+
+          <div>
+            <label htmlFor="questionCount">Number of questions: </label>
             <input
-              checked={category === selectedCategory}
-              id={category}
-              name="category"
-              onChange={updateCategory}
+              id="questionCount"
+              max={INIT.QUESTION_LIMIT.MAX}
+              min={INIT.QUESTION_LIMIT.MIN}
+              onChange={updateQuestionLimit}
               required
-              type="radio"
-              value={category}
+              step="1"
+              type="number"
+              value={selectedQuestionLimit}
             />
-            <label className="radio-bttn-label"
-            htmlFor={category}>{category}</label>
           </div>
-        ))}
-      </fieldset>
-
-      <div>
-        <label htmlFor="questionCount">Number of questions: </label>
-        <input
-          id="questionCount"
-          max={INIT.QUESTION_LIMIT.MAX}
-          min={INIT.QUESTION_LIMIT.MIN}
-          onChange={updateQuestionLimit}
-          required
-          step="1"
-          type="number"
-          value={selectedQuestionLimit}
-        />
-      </div>
-      <button className="button primary" type="submit">Play Game</button>
-    </form>
+          <button
+            className={`${css.GameOptions__playButton} button primary`}
+            type="submit"
+          >
+            Play Game
+          </button>
+        </form>
+      )}
+    </>
   );
 };
 

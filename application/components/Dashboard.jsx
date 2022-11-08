@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import GameOptions from "./GameOptions";
@@ -21,8 +20,7 @@ const Dashboard = () => {
     const storedQuestions = localStorage.getItem("questions");
     if (storedQuestions) {
       setQuestions(JSON.parse(storedQuestions));
-    }
-    console.log("local username is", localStorage.getItem("username"));
+    };
   }, []);
 
   return (
@@ -41,12 +39,12 @@ const Dashboard = () => {
             You are currently half way through a previous game. What would you
             like to do?
           </p>
-          <button type="button" onClick={goToGame}>
+          <button type="button" className="button secondary" onClick={goToGame}>
             Continue
           </button>
           <br />
           <br />
-          <button type="button" onClick={returnToGameOptions}>
+          <button type="button" className="button primary" onClick={returnToGameOptions}>
             New Game
           </button>
         </div>
@@ -55,10 +53,6 @@ const Dashboard = () => {
       )}
     </div>
   );
-};
-
-Dashboard.propTypes = {
-  handleLogout: PropTypes.func.isRequired,
 };
 
 export default Dashboard;

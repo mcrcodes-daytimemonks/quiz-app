@@ -15,6 +15,8 @@
 :root {
   --color-primary: #ffd400;
   --color-secondary: rgb(255, 0, 67);
+  --dark-blue: #00235280;
+  --bttn-primary-bg: rgb(255, 0, 67);
   --bttn-primary-color: #fff;
   --color-tertiary: rgb(0, 214, 242);
   --bttn-secondary-color: #000;
@@ -24,6 +26,10 @@
   --bttn-text-align: center;
   --bttn-border: none;
   --bttn-font-weight: bold;
+}
+
+* {
+  user-select: none;
 }
 
 html,
@@ -49,15 +55,14 @@ button {
   border: var(--bttn-border);
   padding: 0.5rem;
   background-color: var(--color-tertiary);
+  background-color: var(--bttn-secondary-bg);
+  padding: 0.5rem;
   text-align: center;
 }
 
 input[type="radio"]:checked + label {
   font-weight: bold;
-}
-
-input[type="radio"]:not(:checked) + label {
-
+  box-shadow: 0 0 0 4px #00235280 inset;
 }
 
 input[type="radio"] {
@@ -72,4 +77,20 @@ input[type="radio"] {
 
 button.primary {
   background-color: var(--color-secondary); 
+}
+
+button.secondary {
+  background-color: var(--bttn-secondary-bg);
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+code {
+  white-space: nowrap;
+  background-color: #00235280;
+  color: rgb(255, 255, 255);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
 }

@@ -2,14 +2,12 @@ import LoginPopup from "../components/LoginPopUp";
 import GamePlay from "../components/GamePlay";
 import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
-import { useRouter } from "next/router";
 
 const Game = () => {
   const { data: session } = useSession();
   const [category, setCategory] = useState(null);
   const [questionLimit, setQuestionLimit] = useState(null);
   const [questions, setQuestions] = useState(null);
-  const router = useRouter();
 
   useEffect(() => {
     setCategory(localStorage.getItem("category"));
