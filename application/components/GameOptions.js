@@ -37,7 +37,7 @@ const GameOptions = () => {
   useEffect(() => {
     localStorage.setItem("questionLimit", INIT.QUESTION_LIMIT.DEFAULT);
     axios
-      .get("/api/getCategories")
+      .get("/api/getQuestionCategories")
       .then(({ data }) => setCategories(data))
       .catch((err) => console.error(err));
   }, []);
