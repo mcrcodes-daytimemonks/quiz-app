@@ -1,5 +1,4 @@
 import NextAuth from "next-auth";
-import { signIn, useSession } from "next-auth/react";
 import GithubProvider from "next-auth/providers/github";
 import CredentialsProvider from "next-auth/providers/credentials";
 
@@ -7,7 +6,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 const authOptions = {
   providers: [
     GithubProvider({
-      secret: process.env.NEXT_AUTH_SECRET,
+      secret: process.env.NEXTAUTH_SECRET,
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
     }),
@@ -33,7 +32,6 @@ const authOptions = {
       },
     }),
   ],
-  debug: true,
   secret: process.env.NEXTAUTH_SECRET,
 };
 
