@@ -1,5 +1,6 @@
 .Score {
-  height: 100vh;
+  overflow-y: scroll;
+  height: 160vh;
   display: grid;
   place-content: center;
 }
