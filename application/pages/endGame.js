@@ -12,7 +12,7 @@ const EndGame = () => {
     let selectedAnswers = localStorage.getItem("selectedAnswers");
 
     if (selectedAnswers) {
-      fetch("/api/getGameResults", {
+      fetch("/api/getScore", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
